@@ -4,10 +4,12 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F)
 library(tidyverse)
 library(jsonlite)
+library(gt)
 professors_list <- fromJSON("./professor_ratings_by_college.json")
+salaries <- read_csv("./college-salaries/salaries-by-college-type-reduced.csv")
 
 nth_prof <- function(n) {
   if (length(professors_list[n]) >= 1) {
@@ -34,19 +36,35 @@ for (ind in 1:length(professors_list)) {
 professors
 ```
 
-# Data
+## The Project
+In this project, I explore the ratings of professors on campuses across America. All the code for data collection and analysis can be found
+on my academic [github](https://github.com/jonah-harvard/college-scraping). In this project, I look to determine if the distribution of ratings differs from college to college. I also look to see if the distribution of ratings correlates at all with the median salary of graduates of the college.
 
+## The Data
 The data that I am working with concern the ratings of professors across different colleges, and the median salaries of graduates of those colleges.
 
-The ratings data I scraped from the popular site Rate My Professor. Below is an example of the data scraped.
+#### Rating Data
+I wrote a [script in python](https://github.com/jonah-harvard/college-scraping/blob/master/scrape_rate_my_professor.py),
+that I use to collect professor rating data from [Rate My Professor](https://www.ratemyprofessors.com/). Some thought should be put in to whether 
+the ratings are truly representative of the general student opinion of these teachers and readers should just keep in mind that it represents ratings as reported in this specific context. The first 10 professors (alphabetically) are shown below: 
 ```{r professors}
-professors %>% head(50) %>% select(-difficulty)
+professors %>% 
+  select("Name"=name, "Rating"=rating, "Difficulty"=difficulty, "Department" = department, "College" = college) %>% 
+  arrange(Name) %>% tail(-1) %>% head(10) %>% gt() %>% 
+  tab_header(
+    title = "Professor Ratings"
+  )
 ```
-The salary data I got from Kaggle. The dataset was released by the Wall Street Journal.
+
+#### Salary Data
+The data on median salaries after graduation comes from [Kaggle](https://www.kaggle.com/wsj/college-salaries) and was released by the Wall Street Journal. The data feature the median salary of graduates just after graduating and the median salary of graduates well into their careers. Below are the first 10 colleges.
+
 ```{r salaries}
-salaries <- read_csv("./college-salaries/salaries-by-college-type-reduced.csv")
-salaries
+salaries %>% head(10) %>%  gt() %>% 
+  tab_header(
+    title = "Median Salaries by College"
+  )
 ```
 
 
-I intend to use this data to explore both the differences in distribution of ratings and the relationship between ratings and salary after graduation.
+
