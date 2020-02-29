@@ -1,0 +1,50 @@
+---
+title: "College Professors"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(jsonlite)
+professors_list <- fromJSON("./professor_ratings_by_college.json")
+
+nth_prof <- function(n) {
+  if (length(professors_list[n]) >= 1) {
+    return(professors_list[n] %>% as_tibble() %>% pull(1) %>% mutate(college = professors_list[n] %>% as_tibble() %>% colnames()))
+  } else {
+    return(
+        tibble(
+          name = c(NA), 
+          rating = c(NA), 
+          difficulty = c(NA), 
+          department = c(NA), 
+          college = c(professors_list[n] %>% as_tibble() %>% colnames())
+        )
+      )
+  }
+}
+
+professors = nth_prof(1)
+for (ind in 1:10){#length(professors_list)) {
+  if (!is.null(nth_prof(ind))) {
+    professors <- professors %>% union(nth_prof(ind))
+  }
+}
+professors
+```
+
+# Data
+
+The data that I am working with concern the ratings of professors across different colleges, and the median salaries of graduates of those colleges.
+
+The ratings data I scraped from the popular site Rate My Professor:
+```{r professors}
+professors
+```
+The salary data I got from Kaggle:
+```{r salaries}
+salaries <- read_csv("./college-salaries/salaries-by-college-type-reduced.csv")
+salaries
+```
+
