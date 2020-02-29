@@ -1,5 +1,1591 @@
 {
-    "Harvard": [
+    "Massachusetts Institute of Technology": [
+        {
+            "name": "Clark Colton",
+            "rating": 1.9,
+            "difficulty": 4.2,
+            "department": "Engineering"
+        },
+        {
+            "name": "Herbert Sawin",
+            "rating": 3.83,
+            "difficulty": 3.67,
+            "department": "Engineering"
+        },
+        {
+            "name": "Timothy Swager",
+            "rating": 3.07,
+            "difficulty": 3.86,
+            "department": "Chemistry"
+        },
+        {
+            "name": "Donald Sadoway",
+            "rating": 4.04,
+            "difficulty": 2.45,
+            "department": "Engineering"
+        },
+        {
+            "name": "Wolfie Ketterle",
+            "rating": 4.3,
+            "difficulty": 3.5,
+            "department": "Physics"
+        },
+        {
+            "name": "Muriel Medard",
+            "rating": 3.1,
+            "difficulty": 3.9,
+            "department": "Engineering"
+        },
+        {
+            "name": "Albert Meyer",
+            "rating": 3.0,
+            "difficulty": 1.5,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Michael Sipser",
+            "rating": 5.0,
+            "difficulty": 2.9,
+            "department": "Mathematics"
+        },
+        {
+            "name": "David Jerison",
+            "rating": 3.8,
+            "difficulty": 2.8,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Gerald Schneider",
+            "rating": 4.0,
+            "difficulty": 1.0,
+            "department": "Not Specified"
+        },
+        {
+            "name": "Richard Wurtman",
+            "rating": 4.5,
+            "difficulty": 3.0,
+            "department": "Biology"
+        },
+        {
+            "name": "Anant Agarwal",
+            "rating": 4.3,
+            "difficulty": 2.3,
+            "department": "Engineering"
+        },
+        {
+            "name": "Rodney Brooks",
+            "rating": 4.1,
+            "difficulty": 2.4,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Jesus Alamo",
+            "rating": 3.7,
+            "difficulty": 3.1,
+            "department": "Engineering"
+        },
+        {
+            "name": "Shafrira Goldwasser",
+            "rating": 3.3,
+            "difficulty": 3.6,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Paul Gray",
+            "rating": 4.43,
+            "difficulty": 2.0,
+            "department": "Engineering"
+        },
+        {
+            "name": "Alan Grodzinsky",
+            "rating": 4.3,
+            "difficulty": 3.5,
+            "department": "Engineering"
+        },
+        {
+            "name": "Daniel Jackson",
+            "rating": 4.2,
+            "difficulty": 3.0,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Dina Katabi",
+            "rating": 4.17,
+            "difficulty": 2.0,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Robert Miller",
+            "rating": 5.0,
+            "difficulty": 2.67,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Robert Morris",
+            "rating": 5.0,
+            "difficulty": 4.0,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Asuman Ozdaglar",
+            "rating": 1.5,
+            "difficulty": 3.5,
+            "department": "Engineering"
+        },
+        {
+            "name": "L. Rafael Reif",
+            "rating": 4.7,
+            "difficulty": 3.7,
+            "department": "Engineering"
+        },
+        {
+            "name": "Ronald Rivest",
+            "rating": 4.8,
+            "difficulty": 2.5,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Charles Sodini",
+            "rating": 2.0,
+            "difficulty": 3.7,
+            "department": "Engineering"
+        },
+        {
+            "name": "Kenneth Stevens",
+            "rating": 3.75,
+            "difficulty": 2.0,
+            "department": "Engineering"
+        },
+        {
+            "name": "Peter Szolovits",
+            "rating": 4.2,
+            "difficulty": 3.2,
+            "department": "Health Science"
+        },
+        {
+            "name": "Joel Voldman",
+            "rating": 3.3,
+            "difficulty": 4.0,
+            "department": "Engineering"
+        },
+        {
+            "name": "Stephen Ward",
+            "rating": 2.88,
+            "difficulty": 2.5,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Arthur Mattuck",
+            "rating": 4.35,
+            "difficulty": 3.47,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Woodie Flowers",
+            "rating": 3.67,
+            "difficulty": 3.67,
+            "department": "Engineering"
+        },
+        {
+            "name": "John Ochsendorf",
+            "rating": 5.0,
+            "difficulty": 2.5,
+            "department": "Architecture"
+        },
+        {
+            "name": "Ikue Shingu",
+            "rating": 3.83,
+            "difficulty": 3.83,
+            "department": "Languages"
+        },
+        {
+            "name": "Alvin Kibel",
+            "rating": 2.4,
+            "difficulty": 4.4,
+            "department": "Literature"
+        },
+        {
+            "name": "Thomas Allen",
+            "rating": 4.0,
+            "difficulty": 3.0,
+            "department": "Business"
+        },
+        {
+            "name": "Moungi Bawendi",
+            "rating": 4.0,
+            "difficulty": 2.7,
+            "department": "Chemistry"
+        },
+        {
+            "name": "Cathy Drennan",
+            "rating": 3.2,
+            "difficulty": 2.6,
+            "department": "Chemistry"
+        },
+        {
+            "name": "Haynes R. Miller",
+            "rating": 3.0,
+            "difficulty": 3.5,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Hartley Jr. Rogers",
+            "rating": 3.6,
+            "difficulty": 2.4,
+            "department": "Mathematics"
+        }
+    ],
+    "Worcester Polytechnic Institute": [
+        {
+            "name": "Michael Gennert",
+            "rating": 3.2,
+            "difficulty": 2.7,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Susan Vick",
+            "rating": 4.3,
+            "difficulty": 2.7,
+            "department": "English"
+        },
+        {
+            "name": "Michael Ciaraldi",
+            "rating": 3.41,
+            "difficulty": 2.58,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Dina Solitro",
+            "rating": 4.45,
+            "difficulty": 1.72,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Michael Radzicki",
+            "rating": 3.0,
+            "difficulty": 3.1,
+            "department": "Economics"
+        },
+        {
+            "name": "Joel Brattin",
+            "rating": 3.0,
+            "difficulty": 4.0,
+            "department": "English"
+        },
+        {
+            "name": "Wesley Mott",
+            "rating": 3.97,
+            "difficulty": 2.4,
+            "department": "English"
+        },
+        {
+            "name": "Zhikun Hou",
+            "rating": 2.2,
+            "difficulty": 2.8,
+            "department": "Engineering"
+        },
+        {
+            "name": "William Farr",
+            "rating": 4.8,
+            "difficulty": 2.6,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Robert Norton",
+            "rating": 4.07,
+            "difficulty": 4.14,
+            "department": "Engineering"
+        },
+        {
+            "name": "Eben Cobb",
+            "rating": 3.71,
+            "difficulty": 2.53,
+            "department": "Engineering"
+        },
+        {
+            "name": "Raymond Hagglund",
+            "rating": 2.2,
+            "difficulty": 1.9,
+            "department": "Engineering"
+        },
+        {
+            "name": "Kathryn Fisler",
+            "rating": 4.0,
+            "difficulty": 3.6,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Edward Clancy",
+            "rating": 3.83,
+            "difficulty": 3.21,
+            "department": "Engineering"
+        },
+        {
+            "name": "Bogdan Vernescu",
+            "rating": 3.93,
+            "difficulty": 2.85,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Peter Christopher",
+            "rating": 3.9,
+            "difficulty": 3.0,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Kent Ljungquist",
+            "rating": 4.94,
+            "difficulty": 2.35,
+            "department": "English"
+        },
+        {
+            "name": "Vladimir Dobrushkin",
+            "rating": 1.66,
+            "difficulty": 3.44,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Mark Claypool",
+            "rating": 4.14,
+            "difficulty": 3.73,
+            "department": "Computer Science"
+        },
+        {
+            "name": "John Kleinsmith",
+            "rating": 2.81,
+            "difficulty": 3.0,
+            "department": "Engineering"
+        },
+        {
+            "name": "Roger Gottlieb",
+            "rating": 3.64,
+            "difficulty": 2.83,
+            "department": "Philosophy"
+        },
+        {
+            "name": "George Phillies",
+            "rating": 2.7,
+            "difficulty": 4.4,
+            "department": "Science"
+        },
+        {
+            "name": "Mikhail Mikhailov",
+            "rating": 4.39,
+            "difficulty": 2.33,
+            "department": "Computer Science"
+        },
+        {
+            "name": "William Baller",
+            "rating": 3.7,
+            "difficulty": 2.2,
+            "department": "History"
+        },
+        {
+            "name": "Helen Vassallo",
+            "rating": 4.0,
+            "difficulty": 2.5,
+            "department": "Business"
+        },
+        {
+            "name": "David Olinger",
+            "rating": 4.0,
+            "difficulty": 3.1,
+            "department": "Engineering"
+        },
+        {
+            "name": "Makhlouf Makhlouf",
+            "rating": 3.1,
+            "difficulty": 4.1,
+            "department": "Engineering"
+        },
+        {
+            "name": "Nikolas Kazantzis",
+            "rating": 4.7,
+            "difficulty": 2.9,
+            "department": "Engineering"
+        },
+        {
+            "name": "Theodore Crusberg",
+            "rating": 2.77,
+            "difficulty": 2.15,
+            "department": "Science"
+        },
+        {
+            "name": "Homer Walker",
+            "rating": 3.23,
+            "difficulty": 2.92,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Daniel Gibson",
+            "rating": 3.18,
+            "difficulty": 3.04,
+            "department": "Science"
+        },
+        {
+            "name": "John Wilkes",
+            "rating": 1.9,
+            "difficulty": 2.64,
+            "department": "Social Science"
+        },
+        {
+            "name": "Joseph Bagshaw",
+            "rating": 2.79,
+            "difficulty": 2.29,
+            "department": "Science"
+        },
+        {
+            "name": "Padmanabhan Aravind",
+            "rating": 3.2,
+            "difficulty": 2.7,
+            "department": "Science"
+        },
+        {
+            "name": "Christopher Larsen",
+            "rating": 3.0,
+            "difficulty": 3.7,
+            "department": "Mathematics"
+        },
+        {
+            "name": "John Delorey",
+            "rating": 4.53,
+            "difficulty": 1.41,
+            "department": "Music"
+        },
+        {
+            "name": "Guillermo Salazar",
+            "rating": 3.5,
+            "difficulty": 3.2,
+            "department": "Engineering"
+        },
+        {
+            "name": "David Brown",
+            "rating": 2.94,
+            "difficulty": 3.69,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Carolann Koleci",
+            "rating": 4.62,
+            "difficulty": 2.89,
+            "department": "Science"
+        },
+        {
+            "name": "Domokos Vermes",
+            "rating": 2.7,
+            "difficulty": 3.1,
+            "department": "Mathematics"
+        }
+    ],
+    "Carnegie Mellon University": [
+        {
+            "name": "Steven Klepper",
+            "rating": 3.99,
+            "difficulty": 3.71,
+            "department": "Economics"
+        },
+        {
+            "name": "Charles Newman",
+            "rating": 3.17,
+            "difficulty": 3.83,
+            "department": "Engineering"
+        },
+        {
+            "name": "Juan Jorge Sch\u00e4ffer",
+            "rating": 2.07,
+            "difficulty": 3.67,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Klaus Sutner",
+            "rating": 4.3,
+            "difficulty": 3.5,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Alan Kennedy",
+            "rating": 4.5,
+            "difficulty": 2.43,
+            "department": "English"
+        },
+        {
+            "name": "Kunal Ghosh",
+            "rating": 3.55,
+            "difficulty": 3.68,
+            "department": "Science"
+        },
+        {
+            "name": "Oded Meyer",
+            "rating": 4.61,
+            "difficulty": 1.67,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Naum Kats",
+            "rating": 4.41,
+            "difficulty": 1.27,
+            "department": "History"
+        },
+        {
+            "name": "John Hayes",
+            "rating": 2.88,
+            "difficulty": 2.58,
+            "department": "Psychology"
+        },
+        {
+            "name": "Charlee Brodsky",
+            "rating": 3.8,
+            "difficulty": 2.4,
+            "department": "Fine Arts"
+        },
+        {
+            "name": "Eric Anderson",
+            "rating": 3.06,
+            "difficulty": 3.0,
+            "department": "Fine Arts"
+        },
+        {
+            "name": "Mary Weidner",
+            "rating": 4.35,
+            "difficulty": 2.8,
+            "department": "Fine Arts"
+        },
+        {
+            "name": "Randy Pausch",
+            "rating": 4.5,
+            "difficulty": 3.38,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Davin Lafon",
+            "rating": 4.4,
+            "difficulty": 1.4,
+            "department": "Philosophy"
+        },
+        {
+            "name": "Victor Adamchik",
+            "rating": 3.28,
+            "difficulty": 3.14,
+            "department": "Computer Science"
+        },
+        {
+            "name": "David Rakison",
+            "rating": 4.7,
+            "difficulty": 2.6,
+            "department": "Psychology"
+        },
+        {
+            "name": "Lori Holt",
+            "rating": 4.0,
+            "difficulty": 2.9,
+            "department": "Psychology"
+        },
+        {
+            "name": "Jim Daniels",
+            "rating": 3.4,
+            "difficulty": 2.7,
+            "department": "English"
+        },
+        {
+            "name": "Hilary Masters",
+            "rating": 4.04,
+            "difficulty": 3.75,
+            "department": "English"
+        },
+        {
+            "name": "Jane Bernstein",
+            "rating": 3.5,
+            "difficulty": 2.7,
+            "department": "English"
+        },
+        {
+            "name": "J. Devine",
+            "rating": 4.3,
+            "difficulty": 2.8,
+            "department": "Humanities"
+        },
+        {
+            "name": "Guy Blelloch",
+            "rating": 4.0,
+            "difficulty": 3.6,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Peter Berget",
+            "rating": 4.5,
+            "difficulty": 3.83,
+            "department": "Science"
+        },
+        {
+            "name": "Rami Grossberg",
+            "rating": 3.07,
+            "difficulty": 3.29,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Russ Walker",
+            "rating": 3.3,
+            "difficulty": 3.0,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Helmut Vogel",
+            "rating": 4.5,
+            "difficulty": 3.3,
+            "department": "Science"
+        },
+        {
+            "name": "Jimmy Zhu",
+            "rating": 3.3,
+            "difficulty": 3.2,
+            "department": "Engineering"
+        },
+        {
+            "name": "Stephen Schultz",
+            "rating": 4.88,
+            "difficulty": 1.25,
+            "department": "Music"
+        },
+        {
+            "name": "Scott Sandage",
+            "rating": 4.0,
+            "difficulty": 3.0,
+            "department": "History"
+        },
+        {
+            "name": "Vicki Helgeson",
+            "rating": 3.4,
+            "difficulty": 3.6,
+            "department": "Psychology"
+        },
+        {
+            "name": "Steven Rudich",
+            "rating": 3.61,
+            "difficulty": 4.44,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Paul Karol",
+            "rating": 2.75,
+            "difficulty": 3.72,
+            "department": "Science"
+        },
+        {
+            "name": "Milton Cofield",
+            "rating": 4.03,
+            "difficulty": 1.63,
+            "department": "Business"
+        },
+        {
+            "name": "John Tolle",
+            "rating": 3.8,
+            "difficulty": 2.87,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Karen Stump",
+            "rating": 3.9,
+            "difficulty": 3.8,
+            "department": "Science"
+        },
+        {
+            "name": "Stephen Totter",
+            "rating": 4.4,
+            "difficulty": 2.2,
+            "department": "Music"
+        },
+        {
+            "name": "Tim Hoffman",
+            "rating": 4.18,
+            "difficulty": 2.27,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Matthew P. Szudzik",
+            "rating": 4.8,
+            "difficulty": 2.3,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Jack Beuth",
+            "rating": 3.5,
+            "difficulty": 2.8,
+            "department": "Engineering"
+        },
+        {
+            "name": "Robert F. Sekerka",
+            "rating": 2.38,
+            "difficulty": 3.88,
+            "department": "Physics"
+        }
+    ],
+    "University of Illinois at Urbana-Champaign": [
+        {
+            "name": "Donna Brown",
+            "rating": 3.34,
+            "difficulty": 4.07,
+            "department": "Engineering"
+        },
+        {
+            "name": "Ralph Husby",
+            "rating": 3.61,
+            "difficulty": 2.78,
+            "department": "Economics"
+        },
+        {
+            "name": "Seth Hutchinson",
+            "rating": 3.5,
+            "difficulty": 3.22,
+            "department": "Engineering"
+        },
+        {
+            "name": "David Brown",
+            "rating": 2.5,
+            "difficulty": 3.0,
+            "department": "Education"
+        },
+        {
+            "name": "David Bullock",
+            "rating": 2.38,
+            "difficulty": 4.15,
+            "department": "Economics"
+        },
+        {
+            "name": "Susan Curtis",
+            "rating": 2.6,
+            "difficulty": 3.4,
+            "department": "Accounting"
+        },
+        {
+            "name": "A.J. Hildebrand",
+            "rating": 4.5,
+            "difficulty": 2.6,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Stan Ambrose",
+            "rating": 2.7,
+            "difficulty": 3.0,
+            "department": "Anthropology"
+        },
+        {
+            "name": "James Kaler",
+            "rating": 4.69,
+            "difficulty": 1.63,
+            "department": "Science"
+        },
+        {
+            "name": "Paul Kwiat",
+            "rating": 4.1,
+            "difficulty": 3.3,
+            "department": "Physics"
+        },
+        {
+            "name": "Peter Silhan",
+            "rating": 1.6,
+            "difficulty": 3.6,
+            "department": "Business"
+        },
+        {
+            "name": "Tracy Sulkin",
+            "rating": 4.25,
+            "difficulty": 2.38,
+            "department": "Political Science"
+        },
+        {
+            "name": "Brian Gaines",
+            "rating": 3.04,
+            "difficulty": 3.93,
+            "department": "Political Science"
+        },
+        {
+            "name": "Melissa Orlie",
+            "rating": 3.17,
+            "difficulty": 4.0,
+            "department": "Political Science"
+        },
+        {
+            "name": "Scott Althaus",
+            "rating": 3.9,
+            "difficulty": 3.9,
+            "department": "Political Science"
+        },
+        {
+            "name": "Steven Zumdahl",
+            "rating": 3.5,
+            "difficulty": 3.0,
+            "department": "Science"
+        },
+        {
+            "name": "Bruce Fouke",
+            "rating": 4.6,
+            "difficulty": 2.1,
+            "department": "Science"
+        },
+        {
+            "name": "Zachary Elkins",
+            "rating": 4.13,
+            "difficulty": 3.0,
+            "department": "Political Science"
+        },
+        {
+            "name": "Dave Roediger",
+            "rating": 3.59,
+            "difficulty": 2.24,
+            "department": "History"
+        },
+        {
+            "name": "Christine Yerkes",
+            "rating": 3.15,
+            "difficulty": 3.65,
+            "department": "Science"
+        },
+        {
+            "name": "Susan Krische",
+            "rating": 2.89,
+            "difficulty": 3.89,
+            "department": "Accounting"
+        },
+        {
+            "name": "Thomas Rudolph",
+            "rating": 3.8,
+            "difficulty": 2.3,
+            "department": "Political Science"
+        },
+        {
+            "name": "Scott Denmark",
+            "rating": 3.7,
+            "difficulty": 4.0,
+            "department": "Science"
+        },
+        {
+            "name": "Martin Manalansan",
+            "rating": 4.1,
+            "difficulty": 1.3,
+            "department": "Anthropology"
+        },
+        {
+            "name": "Beth Morgan",
+            "rating": 3.08,
+            "difficulty": 2.84,
+            "department": "Science"
+        },
+        {
+            "name": "Sarita Adve",
+            "rating": 3.97,
+            "difficulty": 3.28,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Thomas Gambill",
+            "rating": 3.5,
+            "difficulty": 2.5,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Gabriel Solis",
+            "rating": 3.3,
+            "difficulty": 2.1,
+            "department": "Music"
+        },
+        {
+            "name": "S. Max Edelson",
+            "rating": 4.2,
+            "difficulty": 2.6,
+            "department": "History"
+        },
+        {
+            "name": "Donna Charlevoix",
+            "rating": 3.55,
+            "difficulty": 2.61,
+            "department": "Science"
+        },
+        {
+            "name": "Pete Griffin",
+            "rating": 4.89,
+            "difficulty": 2.39,
+            "department": "Music"
+        },
+        {
+            "name": "Elliot Chasanov",
+            "rating": 2.13,
+            "difficulty": 3.5,
+            "department": "Music"
+        },
+        {
+            "name": "Guemlan Choi",
+            "rating": 2.85,
+            "difficulty": 2.15,
+            "department": "Mathematics"
+        },
+        {
+            "name": "James Hansen",
+            "rating": 4.0,
+            "difficulty": 3.1,
+            "department": "English"
+        },
+        {
+            "name": "Ira Carmen",
+            "rating": 4.3,
+            "difficulty": 4.3,
+            "department": "Political Science"
+        },
+        {
+            "name": "Tim Newcomb",
+            "rating": 3.0,
+            "difficulty": 2.5,
+            "department": "English"
+        },
+        {
+            "name": "William Bernhard",
+            "rating": 3.63,
+            "difficulty": 2.67,
+            "department": "Political Science"
+        },
+        {
+            "name": "Robert Weissberg",
+            "rating": 2.94,
+            "difficulty": 2.56,
+            "department": "Political Science"
+        },
+        {
+            "name": "Mark Roszkowski",
+            "rating": 3.29,
+            "difficulty": 3.67,
+            "department": "Business"
+        },
+        {
+            "name": "Bart Taub",
+            "rating": 2.65,
+            "difficulty": 3.69,
+            "department": "Economics"
+        }
+    ],
+    "Dartmouth College": [
+        {
+            "name": "Laurence Davies",
+            "rating": 4.3,
+            "difficulty": 2.7,
+            "department": "English"
+        },
+        {
+            "name": "John Pfister",
+            "rating": 5.0,
+            "difficulty": 2.33,
+            "department": "Psychology"
+        },
+        {
+            "name": "John Watanabe",
+            "rating": 4.75,
+            "difficulty": 3.5,
+            "department": "Anthropology"
+        },
+        {
+            "name": "Erland Schulson",
+            "rating": 2.0,
+            "difficulty": 3.5,
+            "department": "Engineering"
+        },
+        {
+            "name": "Bill Kelley",
+            "rating": 3.33,
+            "difficulty": 2.33,
+            "department": "Psychology"
+        },
+        {
+            "name": "Adrian Randolph",
+            "rating": 4.08,
+            "difficulty": 3.33,
+            "department": "Art History"
+        },
+        {
+            "name": "Terry Osborne",
+            "rating": 4.29,
+            "difficulty": 3.0,
+            "department": "English"
+        },
+        {
+            "name": "Fillia Makedon",
+            "rating": 3.0,
+            "difficulty": 2.0,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Prasad Jayanti",
+            "rating": 4.76,
+            "difficulty": 2.88,
+            "department": "Computer Science"
+        },
+        {
+            "name": "Don Pease",
+            "rating": 3.31,
+            "difficulty": 2.88,
+            "department": "Humanities"
+        },
+        {
+            "name": "David Glueck",
+            "rating": 4.1,
+            "difficulty": 2.8,
+            "department": "Chemistry"
+        },
+        {
+            "name": "John Winn",
+            "rating": 3.17,
+            "difficulty": 3.67,
+            "department": "Chemistry"
+        },
+        {
+            "name": "Deborah Nichols",
+            "rating": 2.4,
+            "difficulty": 3.6,
+            "department": "Anthropology"
+        },
+        {
+            "name": "Marlene Heck",
+            "rating": 5.0,
+            "difficulty": 4.0,
+            "department": "Fine Arts"
+        },
+        {
+            "name": "Yale Cohen",
+            "rating": 2.85,
+            "difficulty": 3.1,
+            "department": "Psychology"
+        },
+        {
+            "name": "Patricia McKee",
+            "rating": 3.75,
+            "difficulty": 3.0,
+            "department": "English"
+        },
+        {
+            "name": "Barbara Dimmick",
+            "rating": 3.25,
+            "difficulty": 4.5,
+            "department": "English"
+        },
+        {
+            "name": "Sergei Kan",
+            "rating": 3.0,
+            "difficulty": 2.5,
+            "department": "Anthropology"
+        },
+        {
+            "name": "Thomas Luxon",
+            "rating": 4.22,
+            "difficulty": 3.11,
+            "department": "English"
+        },
+        {
+            "name": "Peter Tse",
+            "rating": 5.0,
+            "difficulty": 3.0,
+            "department": "Psychology"
+        },
+        {
+            "name": "Douglass Moody",
+            "rating": 4.8,
+            "difficulty": 1.6,
+            "department": "English"
+        },
+        {
+            "name": "Hoyt Alverson",
+            "rating": 2.1,
+            "difficulty": 3.8,
+            "department": "Anthropology"
+        },
+        {
+            "name": "Lee Lynd",
+            "rating": 2.75,
+            "difficulty": 2.5,
+            "department": "Engineering"
+        },
+        {
+            "name": "David Kotz",
+            "rating": 2.9,
+            "difficulty": 4.0,
+            "department": "Computer Science"
+        },
+        {
+            "name": "David Laguardia",
+            "rating": 4.1,
+            "difficulty": 2.8,
+            "department": "Languages"
+        },
+        {
+            "name": "William Wade",
+            "rating": 2.75,
+            "difficulty": 4.5,
+            "department": "Science"
+        },
+        {
+            "name": "Andrew McCann",
+            "rating": 4.33,
+            "difficulty": 2.67,
+            "department": "English"
+        },
+        {
+            "name": "Mary Desjardins",
+            "rating": 4.75,
+            "difficulty": 3.0,
+            "department": "Film"
+        },
+        {
+            "name": "Misagh Parsa",
+            "rating": 4.08,
+            "difficulty": 3.5,
+            "department": "Sociology"
+        },
+        {
+            "name": "Ronald Edsforth",
+            "rating": 2.92,
+            "difficulty": 3.67,
+            "department": "History"
+        },
+        {
+            "name": "Colleen Boggs",
+            "rating": 4.5,
+            "difficulty": 3.5,
+            "department": "English"
+        },
+        {
+            "name": "Stephanie Boone",
+            "rating": 5.0,
+            "difficulty": 4.7,
+            "department": "English"
+        },
+        {
+            "name": "Michael Chaney",
+            "rating": 4.5,
+            "difficulty": 5.0,
+            "department": "English"
+        }
+    ],
+    "Princeton University": [
+        {
+            "name": "Joshua Katz",
+            "rating": 5.0,
+            "difficulty": 3.3,
+            "department": "Classics"
+        },
+        {
+            "name": "Jennifer Johnson",
+            "rating": 4.9,
+            "difficulty": 3.0,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Morton Kostin",
+            "rating": 2.8,
+            "difficulty": 2.6,
+            "department": "Engineering"
+        },
+        {
+            "name": "Robert Bagley",
+            "rating": 4.5,
+            "difficulty": 3.2,
+            "department": "Art History"
+        },
+        {
+            "name": "Ron Comer",
+            "rating": 4.32,
+            "difficulty": 2.5,
+            "department": "Psychology"
+        },
+        {
+            "name": "James Gould",
+            "rating": 3.05,
+            "difficulty": 3.0,
+            "department": "Science"
+        },
+        {
+            "name": "Martin Semmelhack",
+            "rating": 3.5,
+            "difficulty": 3.9,
+            "department": "Science"
+        },
+        {
+            "name": "Maitland Jones",
+            "rating": 3.71,
+            "difficulty": 4.33,
+            "department": "Chemistry"
+        },
+        {
+            "name": "Jamie Rankin",
+            "rating": 5.0,
+            "difficulty": 3.5,
+            "department": "Languages"
+        },
+        {
+            "name": "Molly Greene",
+            "rating": 4.9,
+            "difficulty": 3.6,
+            "department": "History"
+        },
+        {
+            "name": "Susan Naquin",
+            "rating": 3.75,
+            "difficulty": 2.0,
+            "department": "History"
+        },
+        {
+            "name": "William Jordan",
+            "rating": 4.67,
+            "difficulty": 3.83,
+            "department": "History"
+        },
+        {
+            "name": "Robert Kaster",
+            "rating": 3.5,
+            "difficulty": 3.6,
+            "department": "Classics"
+        },
+        {
+            "name": "Alexander Nehamas",
+            "rating": 4.5,
+            "difficulty": 4.0,
+            "department": "Philosophy"
+        },
+        {
+            "name": "Lyman Page",
+            "rating": 4.89,
+            "difficulty": 2.56,
+            "department": "Physics"
+        },
+        {
+            "name": "Cornel West",
+            "rating": 4.1,
+            "difficulty": 3.6,
+            "department": "Ethnic Studies"
+        },
+        {
+            "name": "Francois Rigolot",
+            "rating": 4.5,
+            "difficulty": 3.0,
+            "department": "Languages"
+        },
+        {
+            "name": "Paul Krugman",
+            "rating": 3.0,
+            "difficulty": 2.9,
+            "department": "Economics"
+        },
+        {
+            "name": "Gideon Rosen",
+            "rating": 4.23,
+            "difficulty": 3.27,
+            "department": "Philosophy"
+        },
+        {
+            "name": "Peter Singer",
+            "rating": 3.2,
+            "difficulty": 2.8,
+            "department": "Philosophy"
+        },
+        {
+            "name": "Gary Bass",
+            "rating": 4.5,
+            "difficulty": 3.38,
+            "department": "Political Science"
+        },
+        {
+            "name": "John Conway",
+            "rating": 3.08,
+            "difficulty": 4.0,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Francois Bovon",
+            "rating": 3.5,
+            "difficulty": 3.0,
+            "department": "Theology"
+        },
+        {
+            "name": "Al Acres",
+            "rating": 4.7,
+            "difficulty": 3.3,
+            "department": "Art History"
+        },
+        {
+            "name": "Michael Gordin",
+            "rating": 3.0,
+            "difficulty": 3.0,
+            "department": "History"
+        },
+        {
+            "name": "Daniel Marlow",
+            "rating": 4.7,
+            "difficulty": 2.8,
+            "department": "Physics"
+        },
+        {
+            "name": "Ed Zschau",
+            "rating": 3.9,
+            "difficulty": 2.4,
+            "department": "Engineering"
+        },
+        {
+            "name": "Pablo Debenedetti",
+            "rating": 4.7,
+            "difficulty": 3.0,
+            "department": "Engineering"
+        },
+        {
+            "name": "Mark Rose",
+            "rating": 3.0,
+            "difficulty": 3.67,
+            "department": "Biology"
+        },
+        {
+            "name": "Hans Halvorson",
+            "rating": 4.4,
+            "difficulty": 3.6,
+            "department": "Philosophy"
+        },
+        {
+            "name": "Amaney Jamal",
+            "rating": 3.67,
+            "difficulty": 3.33,
+            "department": "Political Science"
+        },
+        {
+            "name": "Charlie Gross",
+            "rating": 3.5,
+            "difficulty": 3.7,
+            "department": "Psychology"
+        },
+        {
+            "name": "Kiki Jamison",
+            "rating": 4.33,
+            "difficulty": 3.83,
+            "department": "Political Science"
+        },
+        {
+            "name": "Michal Cadden",
+            "rating": 3.88,
+            "difficulty": 3.5,
+            "department": "Theater"
+        },
+        {
+            "name": "Miguel Centeno",
+            "rating": 4.9,
+            "difficulty": 3.0,
+            "department": "Sociology"
+        },
+        {
+            "name": "Sophie Gee",
+            "rating": 3.14,
+            "difficulty": 3.43,
+            "department": "English"
+        },
+        {
+            "name": "John V. Fleming",
+            "rating": 3.4,
+            "difficulty": 3.2,
+            "department": "English"
+        }
+    ],
+    "Yale University": [
+        {
+            "name": "John Merriman",
+            "rating": 3.64,
+            "difficulty": 2.71,
+            "department": "History"
+        },
+        {
+            "name": "Glenda Gilmore",
+            "rating": 4.44,
+            "difficulty": 3.63,
+            "department": "History"
+        },
+        {
+            "name": "Brian Scholl",
+            "rating": 4.2,
+            "difficulty": 2.9,
+            "department": "Psychology"
+        },
+        {
+            "name": "Joseph Chang",
+            "rating": 3.83,
+            "difficulty": 2.5,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Timothy Robinson",
+            "rating": 4.05,
+            "difficulty": 2.64,
+            "department": "English"
+        },
+        {
+            "name": "Lourdes Sabe",
+            "rating": 4.67,
+            "difficulty": 3.33,
+            "department": "Spanish"
+        },
+        {
+            "name": "Paul Bloom",
+            "rating": 3.6,
+            "difficulty": 2.9,
+            "department": "Psychology"
+        },
+        {
+            "name": "E-L Pelkonen",
+            "rating": 2.8,
+            "difficulty": 2.6,
+            "department": "Architecture"
+        },
+        {
+            "name": "Sophia Gruzdys",
+            "rating": 3.5,
+            "difficulty": 2.9,
+            "department": "Architecture"
+        },
+        {
+            "name": "Donald Kagan",
+            "rating": 4.69,
+            "difficulty": 3.85,
+            "department": "History"
+        },
+        {
+            "name": "Ed Mitchell",
+            "rating": 2.0,
+            "difficulty": 3.5,
+            "department": "Architecture"
+        },
+        {
+            "name": "Craig Wright",
+            "rating": 4.3,
+            "difficulty": 2.2,
+            "department": "Music"
+        },
+        {
+            "name": "Mark Johnson",
+            "rating": 3.0,
+            "difficulty": 3.63,
+            "department": "Science"
+        },
+        {
+            "name": "Frances Brent",
+            "rating": 3.63,
+            "difficulty": 3.5,
+            "department": "English"
+        },
+        {
+            "name": "Bernard Bate",
+            "rating": 4.3,
+            "difficulty": 2.8,
+            "department": "Anthropology"
+        },
+        {
+            "name": "David Anjelly",
+            "rating": 5.0,
+            "difficulty": 5.0,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Karsten Harries",
+            "rating": 5.0,
+            "difficulty": 3.0,
+            "department": "Philosophy"
+        },
+        {
+            "name": "John Faragher",
+            "rating": 2.55,
+            "difficulty": 3.3,
+            "department": "History"
+        },
+        {
+            "name": "Rosemarie Morgan",
+            "rating": 4.67,
+            "difficulty": 3.0,
+            "department": "English"
+        },
+        {
+            "name": "Sybil Alexandrov",
+            "rating": 4.2,
+            "difficulty": 2.6,
+            "department": "African-American Studies"
+        },
+        {
+            "name": "Henry Sussman",
+            "rating": 3.8,
+            "difficulty": 2.3,
+            "department": "Literature"
+        },
+        {
+            "name": "Ruth Koizim",
+            "rating": 5.0,
+            "difficulty": 3.5,
+            "department": "Languages"
+        },
+        {
+            "name": "David Cameron",
+            "rating": 3.3,
+            "difficulty": 3.5,
+            "department": "Political Science"
+        },
+        {
+            "name": "Harold Bloom",
+            "rating": 3.54,
+            "difficulty": 3.23,
+            "department": "English"
+        },
+        {
+            "name": "Patrick Loria",
+            "rating": 3.13,
+            "difficulty": 3.5,
+            "department": "Chemistry"
+        },
+        {
+            "name": "Michael Auslin",
+            "rating": 3.3,
+            "difficulty": 3.6,
+            "department": "History"
+        },
+        {
+            "name": "Justine Hastings",
+            "rating": 2.04,
+            "difficulty": 3.64,
+            "department": "Economics"
+        },
+        {
+            "name": "Edwin Duval",
+            "rating": 5.0,
+            "difficulty": 4.0,
+            "department": "Languages"
+        },
+        {
+            "name": "Harold Attridge",
+            "rating": 4.5,
+            "difficulty": 5.0,
+            "department": "Theology"
+        },
+        {
+            "name": "Charles Hill",
+            "rating": 2.78,
+            "difficulty": 2.56,
+            "department": "International Studies"
+        },
+        {
+            "name": "Richard Deming",
+            "rating": 3.56,
+            "difficulty": 4.11,
+            "department": "English"
+        },
+        {
+            "name": "Alexander Beecroft",
+            "rating": 3.8,
+            "difficulty": 2.4,
+            "department": "Literature"
+        },
+        {
+            "name": "Ayala Dostorevsky",
+            "rating": 5.0,
+            "difficulty": 2.5,
+            "department": "Languages"
+        }
+    ],
+    "Harvard University": [
         {
             "name": "Kyle Bates",
             "rating": 3.79,
@@ -239,6 +1825,927 @@
             "rating": 4.88,
             "difficulty": 4.0,
             "department": "Chemistry"
+        }
+    ],
+    "University of Pennsylvania": [
+        {
+            "name": ". Zlotowski",
+            "rating": 2.46,
+            "difficulty": 3.69,
+            "department": "Education"
+        },
+        {
+            "name": "James Wolfe",
+            "rating": 3.58,
+            "difficulty": 3.9,
+            "department": "Computer Science"
+        },
+        {
+            "name": "John Hanson",
+            "rating": 2.0,
+            "difficulty": 2.5,
+            "department": "Journalism"
+        },
+        {
+            "name": "Michael Pearson",
+            "rating": 3.55,
+            "difficulty": 3.09,
+            "department": "Communication"
+        },
+        {
+            "name": "Michael Brooks",
+            "rating": 3.84,
+            "difficulty": 1.86,
+            "department": "English"
+        },
+        {
+            "name": "Charles Grove",
+            "rating": 4.32,
+            "difficulty": 3.45,
+            "department": "Languages"
+        },
+        {
+            "name": "Yochanan Shachmurove",
+            "rating": 2.0,
+            "difficulty": 3.7,
+            "department": "Economics"
+        },
+        {
+            "name": "Rudra Sil",
+            "rating": 4.46,
+            "difficulty": 2.79,
+            "department": "Political Science"
+        },
+        {
+            "name": "Dennis Williams",
+            "rating": 3.82,
+            "difficulty": 2.2,
+            "department": "Music"
+        },
+        {
+            "name": "Deborah Frantz",
+            "rating": 3.33,
+            "difficulty": 3.56,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Diane Jensen",
+            "rating": 3.48,
+            "difficulty": 1.98,
+            "department": "Speech Communication"
+        },
+        {
+            "name": "Madan Varma",
+            "rating": 2.1,
+            "difficulty": 4.3,
+            "department": "Physics"
+        },
+        {
+            "name": "Janice Chernekoff",
+            "rating": 3.63,
+            "difficulty": 3.17,
+            "department": "English"
+        },
+        {
+            "name": "Stephen Welch",
+            "rating": 3.78,
+            "difficulty": 2.13,
+            "department": "Business"
+        },
+        {
+            "name": "Walter Chandler",
+            "rating": 4.57,
+            "difficulty": 1.9,
+            "department": "Business"
+        },
+        {
+            "name": "Ralph Rodriguez",
+            "rating": 4.8,
+            "difficulty": 3.16,
+            "department": "Business"
+        },
+        {
+            "name": "Rani Selvanathan",
+            "rating": 1.8,
+            "difficulty": 3.7,
+            "department": "Business"
+        },
+        {
+            "name": "Kevin Dunleavy",
+            "rating": 4.0,
+            "difficulty": 2.28,
+            "department": "Economics"
+        },
+        {
+            "name": "Madeline Smith",
+            "rating": 2.09,
+            "difficulty": 4.04,
+            "department": "English"
+        },
+        {
+            "name": "Edward Vitz",
+            "rating": 2.08,
+            "difficulty": 4.29,
+            "department": "Chemistry"
+        },
+        {
+            "name": "G. D. Rains",
+            "rating": 3.5,
+            "difficulty": 3.1,
+            "department": "Psychology"
+        },
+        {
+            "name": "Anne Zayaitz",
+            "rating": 4.55,
+            "difficulty": 3.22,
+            "department": "Biology"
+        },
+        {
+            "name": "William Towne",
+            "rating": 4.1,
+            "difficulty": 3.4,
+            "department": "Biology"
+        },
+        {
+            "name": "Jen Bacon",
+            "rating": 4.04,
+            "difficulty": 3.0,
+            "department": "English"
+        },
+        {
+            "name": "Russell Vreeland",
+            "rating": 1.97,
+            "difficulty": 4.79,
+            "department": "Science"
+        },
+        {
+            "name": "Tom Wickham",
+            "rating": 4.56,
+            "difficulty": 1.98,
+            "department": "Science"
+        },
+        {
+            "name": "Chad Kauffman",
+            "rating": 4.5,
+            "difficulty": 3.0,
+            "department": "Earth Science"
+        },
+        {
+            "name": "Dan Benson",
+            "rating": 4.07,
+            "difficulty": 1.95,
+            "department": "Management"
+        },
+        {
+            "name": "John Hamrick",
+            "rating": 4.29,
+            "difficulty": 2.0,
+            "department": "Management"
+        },
+        {
+            "name": "Elizabeth Rogol",
+            "rating": 4.1,
+            "difficulty": 3.0,
+            "department": "Marketing"
+        },
+        {
+            "name": "Jonathan Kramer",
+            "rating": 4.1,
+            "difficulty": 3.3,
+            "department": "Business"
+        },
+        {
+            "name": "Arifeen Daneshyar",
+            "rating": 3.2,
+            "difficulty": 3.75,
+            "department": "Economics"
+        },
+        {
+            "name": "Timothy Running",
+            "rating": 4.84,
+            "difficulty": 1.26,
+            "department": "Music"
+        },
+        {
+            "name": "William Passwaters",
+            "rating": 3.0,
+            "difficulty": 3.4,
+            "department": "Science"
+        },
+        {
+            "name": "John Helion",
+            "rating": 4.81,
+            "difficulty": 1.78,
+            "department": "Physical Ed"
+        },
+        {
+            "name": "Frank Fry",
+            "rating": 3.5,
+            "difficulty": 3.2,
+            "department": "Physical Ed"
+        },
+        {
+            "name": "Thomas Mastrilli",
+            "rating": 3.53,
+            "difficulty": 2.62,
+            "department": "Education"
+        },
+        {
+            "name": "Paul Smith",
+            "rating": 1.81,
+            "difficulty": 3.62,
+            "department": "Health Science"
+        },
+        {
+            "name": "William Hewitt",
+            "rating": 4.46,
+            "difficulty": 2.44,
+            "department": "History"
+        },
+        {
+            "name": "Scott Balthazar",
+            "rating": 3.01,
+            "difficulty": 2.82,
+            "department": "Music"
+        }
+    ],
+    "Cornell University": [
+        {
+            "name": "Debra Fried",
+            "rating": 3.58,
+            "difficulty": 2.77,
+            "department": "English"
+        },
+        {
+            "name": "Judy Bernstock",
+            "rating": 3.8,
+            "difficulty": 2.3,
+            "department": "Art History"
+        },
+        {
+            "name": "Antje Baeumner",
+            "rating": 2.71,
+            "difficulty": 3.54,
+            "department": "Engineering"
+        },
+        {
+            "name": "Glenn Altschuler",
+            "rating": 3.5,
+            "difficulty": 2.7,
+            "department": "History"
+        },
+        {
+            "name": "Jean Locey",
+            "rating": 2.9,
+            "difficulty": 3.2,
+            "department": "Fine Arts"
+        },
+        {
+            "name": "T. Michael Duncan",
+            "rating": 4.13,
+            "difficulty": 3.83,
+            "department": "Engineering"
+        },
+        {
+            "name": "Jim Shapleigh",
+            "rating": 3.6,
+            "difficulty": 2.6,
+            "department": "Science"
+        },
+        {
+            "name": "Claudia Lazzaro",
+            "rating": 3.83,
+            "difficulty": 3.17,
+            "department": "Art History"
+        },
+        {
+            "name": "Laura Meixner",
+            "rating": 4.25,
+            "difficulty": 2.75,
+            "department": "Art History"
+        },
+        {
+            "name": "Loretta Carrillo",
+            "rating": 4.25,
+            "difficulty": 2.25,
+            "department": "Literature"
+        },
+        {
+            "name": "Sue Merkel",
+            "rating": 2.4,
+            "difficulty": 3.4,
+            "department": "Science"
+        },
+        {
+            "name": "Thomas Owens",
+            "rating": 2.68,
+            "difficulty": 4.38,
+            "department": "Science"
+        },
+        {
+            "name": "Barry Strauss",
+            "rating": 4.5,
+            "difficulty": 2.9,
+            "department": "History"
+        },
+        {
+            "name": "Michel Louge",
+            "rating": 2.61,
+            "difficulty": 3.78,
+            "department": "Engineering"
+        },
+        {
+            "name": "Bernd Lambert",
+            "rating": 4.57,
+            "difficulty": 2.14,
+            "department": "Anthropology"
+        },
+        {
+            "name": "Steve Jackson",
+            "rating": 3.04,
+            "difficulty": 2.43,
+            "department": "History"
+        },
+        {
+            "name": "David Schwartz",
+            "rating": 3.11,
+            "difficulty": 3.27,
+            "department": "Computer Science"
+        },
+        {
+            "name": "James Cutting",
+            "rating": 3.9,
+            "difficulty": 3.8,
+            "department": "Psychology"
+        },
+        {
+            "name": "Len Gross",
+            "rating": 4.17,
+            "difficulty": 3.0,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Leigh Phoenix",
+            "rating": 2.9,
+            "difficulty": 3.0,
+            "department": "Engineering"
+        },
+        {
+            "name": "Rick Allmendinger",
+            "rating": 4.6,
+            "difficulty": 3.4,
+            "department": "Science"
+        },
+        {
+            "name": "Michael Gold",
+            "rating": 3.57,
+            "difficulty": 4.59,
+            "department": "Law"
+        },
+        {
+            "name": "Tim Devoogd",
+            "rating": 3.0,
+            "difficulty": 4.0,
+            "department": "Psychology"
+        },
+        {
+            "name": "Tim Fahey",
+            "rating": 3.54,
+            "difficulty": 2.18,
+            "department": "Science"
+        },
+        {
+            "name": "Alex Flecker",
+            "rating": 3.3,
+            "difficulty": 2.4,
+            "department": "Science"
+        },
+        {
+            "name": "Charles Walcott",
+            "rating": 4.12,
+            "difficulty": 3.44,
+            "department": "Science"
+        },
+        {
+            "name": "Thomas Fox",
+            "rating": 4.3,
+            "difficulty": 3.6,
+            "department": "Science"
+        },
+        {
+            "name": "Stephen Hilgartner",
+            "rating": 4.0,
+            "difficulty": 2.4,
+            "department": "Science"
+        },
+        {
+            "name": "Sam Bacharach",
+            "rating": 4.33,
+            "difficulty": 1.67,
+            "department": "Social Science"
+        },
+        {
+            "name": "Alan Bell",
+            "rating": 4.37,
+            "difficulty": 3.13,
+            "department": "Science"
+        },
+        {
+            "name": "Theodore Lowi",
+            "rating": 3.14,
+            "difficulty": 2.68,
+            "department": "Political Science"
+        },
+        {
+            "name": "Munther Younes",
+            "rating": 4.07,
+            "difficulty": 3.5,
+            "department": "Languages"
+        },
+        {
+            "name": "Timothy Campbell",
+            "rating": 3.0,
+            "difficulty": 4.0,
+            "department": "Languages"
+        },
+        {
+            "name": "Marilyn Migiel",
+            "rating": 4.6,
+            "difficulty": 2.5,
+            "department": "Languages"
+        },
+        {
+            "name": "Flaminia Cervesi-Mccobb",
+            "rating": 4.5,
+            "difficulty": 2.5,
+            "department": "Languages"
+        },
+        {
+            "name": "Bruce Kusse",
+            "rating": 4.22,
+            "difficulty": 3.78,
+            "department": "Engineering"
+        },
+        {
+            "name": "Vaclav Kostroun",
+            "rating": 2.33,
+            "difficulty": 3.5,
+            "department": "Engineering"
+        },
+        {
+            "name": "Robert Terrell",
+            "rating": 3.7,
+            "difficulty": 2.7,
+            "department": "Mathematics"
+        },
+        {
+            "name": "David Zax",
+            "rating": 1.8,
+            "difficulty": 3.8,
+            "department": "Science"
+        },
+        {
+            "name": "Christine Schelhas-Miller",
+            "rating": 3.62,
+            "difficulty": 1.97,
+            "department": "Psychology"
+        }
+    ],
+    "Brown University": [
+        {
+            "name": "Timothy Harris",
+            "rating": 4.61,
+            "difficulty": 3.44,
+            "department": "History"
+        },
+        {
+            "name": "Amy Remensnyder",
+            "rating": 4.41,
+            "difficulty": 3.63,
+            "department": "History"
+        },
+        {
+            "name": "Ken Miller",
+            "rating": 4.5,
+            "difficulty": 3.2,
+            "department": "Science"
+        },
+        {
+            "name": "George Borts",
+            "rating": 2.5,
+            "difficulty": 3.47,
+            "department": "Economics"
+        },
+        {
+            "name": "William Beeman",
+            "rating": 3.55,
+            "difficulty": 3.24,
+            "department": "Anthropology"
+        },
+        {
+            "name": "Catherine Imbriglio",
+            "rating": 4.5,
+            "difficulty": 3.27,
+            "department": "English"
+        },
+        {
+            "name": "Justin Broackes",
+            "rating": 3.32,
+            "difficulty": 2.71,
+            "department": "Philosophy"
+        },
+        {
+            "name": "Rachel Friedberg",
+            "rating": 3.7,
+            "difficulty": 3.0,
+            "department": "Economics"
+        },
+        {
+            "name": "Barrett Hazeltine",
+            "rating": 4.6,
+            "difficulty": 1.5,
+            "department": "Engineering"
+        },
+        {
+            "name": "Herve Vanel",
+            "rating": 3.69,
+            "difficulty": 2.56,
+            "department": "Fine Arts"
+        },
+        {
+            "name": "Carolyn Dean",
+            "rating": 3.5,
+            "difficulty": 3.06,
+            "department": "History"
+        },
+        {
+            "name": "John Tomasi",
+            "rating": 3.8,
+            "difficulty": 3.1,
+            "department": "Political Science"
+        },
+        {
+            "name": "Alexander Zaslavsky",
+            "rating": 3.0,
+            "difficulty": 4.0,
+            "department": "Engineering"
+        },
+        {
+            "name": "Jimmy Xu",
+            "rating": 2.4,
+            "difficulty": 3.7,
+            "department": "Engineering"
+        },
+        {
+            "name": "Brian Hayden",
+            "rating": 3.69,
+            "difficulty": 3.21,
+            "department": "Psychology"
+        },
+        {
+            "name": "Rebecca Burwell",
+            "rating": 3.5,
+            "difficulty": 3.1,
+            "department": "Psychology"
+        },
+        {
+            "name": "David Cater",
+            "rating": 4.33,
+            "difficulty": 2.25,
+            "department": "Psychology"
+        },
+        {
+            "name": "Robbie Castleman",
+            "rating": 4.07,
+            "difficulty": 3.0,
+            "department": "Theology"
+        },
+        {
+            "name": "Philip Gould",
+            "rating": 4.17,
+            "difficulty": 3.17,
+            "department": "English"
+        },
+        {
+            "name": "Scott Lloyd",
+            "rating": 4.8,
+            "difficulty": 2.6,
+            "department": "History"
+        },
+        {
+            "name": "Rick Froman",
+            "rating": 4.0,
+            "difficulty": 2.9,
+            "department": "Psychology"
+        },
+        {
+            "name": "Tracy Breton",
+            "rating": 3.5,
+            "difficulty": 4.3,
+            "department": "English"
+        },
+        {
+            "name": "Joe Walenciak",
+            "rating": 4.3,
+            "difficulty": 2.9,
+            "department": "Business"
+        },
+        {
+            "name": "Neal Holland",
+            "rating": 4.2,
+            "difficulty": 2.9,
+            "department": "Communication"
+        },
+        {
+            "name": "Frank Niles",
+            "rating": 3.38,
+            "difficulty": 4.1,
+            "department": "Political Science"
+        },
+        {
+            "name": "Shepherd Krech",
+            "rating": 2.75,
+            "difficulty": 2.5,
+            "department": "Anthropology"
+        },
+        {
+            "name": "Douglas Anderson",
+            "rating": 3.06,
+            "difficulty": 3.11,
+            "department": "Anthropology"
+        },
+        {
+            "name": "Jan Wubena",
+            "rating": 3.1,
+            "difficulty": 4.5,
+            "department": "Music"
+        },
+        {
+            "name": "Dr. Galen Johnson",
+            "rating": 3.41,
+            "difficulty": 4.0,
+            "department": "Philosophy"
+        },
+        {
+            "name": "Stephen Foley",
+            "rating": 4.0,
+            "difficulty": 2.2,
+            "department": "English"
+        },
+        {
+            "name": "Kerry Smith",
+            "rating": 4.17,
+            "difficulty": 2.67,
+            "department": "History"
+        },
+        {
+            "name": "John McCollough",
+            "rating": 3.9,
+            "difficulty": 2.2,
+            "department": "Business"
+        },
+        {
+            "name": "Mike Kennelley",
+            "rating": 3.88,
+            "difficulty": 3.5,
+            "department": "Business"
+        },
+        {
+            "name": "Jin Li",
+            "rating": 4.2,
+            "difficulty": 2.2,
+            "department": "Education"
+        },
+        {
+            "name": "Esther Whitfield",
+            "rating": 4.3,
+            "difficulty": 2.6,
+            "department": "Literature"
+        },
+        {
+            "name": "Patrick Heller",
+            "rating": 3.83,
+            "difficulty": 3.33,
+            "department": "Sociology"
+        },
+        {
+            "name": "Dietrich Neumann",
+            "rating": 4.3,
+            "difficulty": 2.8,
+            "department": "Architecture"
+        },
+        {
+            "name": "John Stein",
+            "rating": 4.7,
+            "difficulty": 2.87,
+            "department": "Biology"
+        },
+        {
+            "name": "Gregory Elliott",
+            "rating": 4.48,
+            "difficulty": 3.6,
+            "department": "Sociology"
+        },
+        {
+            "name": "Joseph Pucci",
+            "rating": 4.8,
+            "difficulty": 2.1,
+            "department": "Classics"
+        }
+    ],
+    "Rutgers University": [],
+    "University of Massachusetts - Amherst": [
+        {
+            "name": "Amy Butzier",
+            "rating": 4.36,
+            "difficulty": 3.14,
+            "department": "Science"
+        },
+        {
+            "name": "Thomas Bowling",
+            "rating": 4.58,
+            "difficulty": 2.17,
+            "department": "Graphic Arts"
+        },
+        {
+            "name": "Michael Brown",
+            "rating": 3.18,
+            "difficulty": 2.55,
+            "department": "Communication"
+        },
+        {
+            "name": "D Roberto",
+            "rating": 3.73,
+            "difficulty": 4.33,
+            "department": "English"
+        },
+        {
+            "name": "Ellen Goldberger",
+            "rating": 4.8,
+            "difficulty": 2.9,
+            "department": "Criminal Justice"
+        },
+        {
+            "name": "Sarah Jane (Sally) Anderson",
+            "rating": 3.5,
+            "difficulty": 3.6,
+            "department": "Education"
+        },
+        {
+            "name": "Ronald Greenwald",
+            "rating": 4.6,
+            "difficulty": 1.9,
+            "department": "History"
+        },
+        {
+            "name": "Ezra Cove",
+            "rating": 3.0,
+            "difficulty": 3.7,
+            "department": "Graphic Arts"
+        },
+        {
+            "name": "Steven Eames",
+            "rating": 4.5,
+            "difficulty": 3.6,
+            "department": "History"
+        },
+        {
+            "name": "David Ellis",
+            "rating": 3.13,
+            "difficulty": 2.25,
+            "department": "English"
+        },
+        {
+            "name": "Lincoln Passmore",
+            "rating": 4.2,
+            "difficulty": 2.2,
+            "department": "Law"
+        },
+        {
+            "name": "Richard Brown",
+            "rating": 2.3,
+            "difficulty": 2.6,
+            "department": "Psychology"
+        },
+        {
+            "name": "Alioune Gueye",
+            "rating": 3.8,
+            "difficulty": 3.9,
+            "department": "Medicine"
+        },
+        {
+            "name": "Kimberly Karolides",
+            "rating": 4.38,
+            "difficulty": 2.42,
+            "department": "Medicine"
+        },
+        {
+            "name": "Tracy Blais",
+            "rating": 3.94,
+            "difficulty": 3.5,
+            "department": "Medicine"
+        },
+        {
+            "name": "Peter Adamowicz",
+            "rating": 4.81,
+            "difficulty": 2.69,
+            "department": "Mathematics"
+        },
+        {
+            "name": "David Lowry",
+            "rating": 4.17,
+            "difficulty": 2.17,
+            "department": "Mathematics"
+        },
+        {
+            "name": "Barbara Pulaski",
+            "rating": 4.3,
+            "difficulty": 1.5,
+            "department": "Sociology"
+        },
+        {
+            "name": "Alison Stevens",
+            "rating": 4.25,
+            "difficulty": 3.83,
+            "department": "Science"
+        },
+        {
+            "name": "Ron Akie",
+            "rating": 4.0,
+            "difficulty": 3.0,
+            "department": "Business"
+        },
+        {
+            "name": "Pearl Steinbuch",
+            "rating": 4.5,
+            "difficulty": 2.73,
+            "department": "Business"
+        },
+        {
+            "name": "Judith Sgarzi",
+            "rating": 3.7,
+            "difficulty": 3.2,
+            "department": "Criminal Justice"
+        },
+        {
+            "name": "Daniel Young",
+            "rating": 3.5,
+            "difficulty": 4.11,
+            "department": "Medicine"
+        },
+        {
+            "name": "Bob Hodges",
+            "rating": 4.61,
+            "difficulty": 1.86,
+            "department": "Mathematics"
+        },
+        {
+            "name": "James Martin",
+            "rating": 4.3,
+            "difficulty": 3.2,
+            "department": "English"
+        },
+        {
+            "name": "Leo Archambault",
+            "rating": 3.3,
+            "difficulty": 3.4,
+            "department": "Marketing"
+        },
+        {
+            "name": "Jim Martin",
+            "rating": 4.0,
+            "difficulty": 2.0,
+            "department": "English"
+        },
+        {
+            "name": "DR. Martin",
+            "rating": 3.6,
+            "difficulty": 2.6,
+            "department": "English"
+        },
+        {
+            "name": "Cecelia Lewis-Kausel",
+            "rating": 1.0,
+            "difficulty": 3.5,
+            "department": "Design"
+        },
+        {
+            "name": "Rose Botti-Salitsky",
+            "rating": 3.5,
+            "difficulty": 3.6,
+            "department": "Design"
+        },
+        {
+            "name": "Timothy Krukowski",
+            "rating": 4.67,
+            "difficulty": 3.17,
+            "department": "Not Specified"
+        },
+        {
+            "name": "Mary Jane Buttera",
+            "rating": 5.0,
+            "difficulty": 1.0,
+            "department": "Health Science"
         }
     ]
 }

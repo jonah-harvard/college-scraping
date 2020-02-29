@@ -11,6 +11,17 @@ SITE = "https://www.ratemyprofessors.com"
 HARVARD = f"{SITE}/search.jsp?queryoption=HEADER&queryBy=teacherName&schoolName=Harvard+University&schoolID=399&query=*"
 
 
+def college_search(college):
+    college_no_spaces = re.sub(" ", "+", college)
+    college_url = f"{SITE}/search.jsp?queryoption=HEADER&queryBy=teacherName&schoolName={college_no_spaces}&query=*"
+    college_response = requests.get(college_url)
+    college_soup = BeautifulSoup(college_response.content, "html.parser")
+    if college_soup.find("div", class_="result-count").text == "Your search didn't return any results.":
+        print(college, college_url, "was not found")
+        return []
+    return parse_college(college_url)
+
+
 def parse_page(soup):
     professors = soup.find_all(class_="listing PROFESSOR")
     professor_links = [prof.find("a").get("href") for prof in professors]
@@ -31,7 +42,10 @@ def parse_page(soup):
             class_="FeedbackItem__FeedbackNumber-uof32n-1 bGrrmf"
         )
 
-        department = strip_department.sub("", prof_soup.find("b").text)
+        department_tag = prof_soup.find("b")
+        department = "NA"
+        if department_tag != None:
+            department = strip_department.sub("", department_tag.text)
 
         if name == None or rating == None or difficulty == []:
             continue
@@ -62,14 +76,23 @@ def parse_college(url):
         page_response = requests.get(f"{SITE}{page_link}")
         page_soup = BeautifulSoup(page_response.content, "html.parser")
         professors += parse_page(page_soup)
+        break
     return professors
 
 
 if __name__ == "__main__":
-    with open("./college-salaries/salaries-by-college-type.csv") as csvfile:
+    strip_acronym = re.compile(r" \([\w\W]*\)")
+    with open("./college-salaries/salaries-by-college-type-reduced-3.csv") as csvfile:
         reader = DictReader(csvfile)
-        colleges = [row["School Name"] for row in reader]
+        colleges = [
+            strip_acronym.sub("", row["School Name"])
+            for row in reader
+        ]
+
     profs_by_college = {}
-    profs_by_college["Harvard"] = parse_college(HARVARD)
+    # profs_by_college["Harvard"] = parse_college(HARVARD)
+    for college in colleges:
+        profs_by_college[college] = college_search(college)
     with open("professor_ratings_by_college.json", "w+") as f:
         f.write(json.dumps(profs_by_college))
+    print("done")

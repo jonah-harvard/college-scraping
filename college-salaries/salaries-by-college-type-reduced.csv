@@ -1,0 +1,67 @@
+School Name,School Type,Starting Median Salary,Mid-Career Median Salary,Mid-Career 10th Percentile Salary,Mid-Career 25th Percentile Salary,Mid-Career 75th Percentile Salary,Mid-Career 90th Percentile Salary
+Massachusetts Institute of Technology (MIT),Engineering,"$72,200.00","$126,000.00","$76,800.00","$99,200.00","$168,000.00","$220,000.00"
+California Institute of Technology (CIT),Engineering,"$75,500.00","$123,000.00",N/A,"$104,000.00","$161,000.00",N/A
+Harvey Mudd College,Engineering,"$71,800.00","$122,000.00",N/A,"$96,000.00","$180,000.00",N/A
+Worcester Polytechnic Institute (WPI),Engineering,"$61,000.00","$114,000.00","$80,000.00","$91,200.00","$137,000.00","$180,000.00"
+Carnegie Mellon University (CMU),Engineering,"$61,800.00","$111,000.00","$63,300.00","$80,100.00","$150,000.00","$209,000.00"
+Rensselaer Polytechnic Institute (RPI),Engineering,"$61,100.00","$110,000.00","$71,600.00","$85,500.00","$140,000.00","$182,000.00"
+Georgia Institute of Technology,Engineering,"$58,300.00","$106,000.00","$67,200.00","$85,200.00","$137,000.00","$183,000.00"
+Colorado School of Mines,Engineering,"$58,100.00","$106,000.00","$62,200.00","$87,900.00","$142,000.00","$201,000.00"
+Wentworth Institute of Technology,Engineering,"$53,000.00","$96,700.00","$55,200.00","$74,000.00","$117,000.00","$153,000.00"
+Tennessee Technological University,Engineering,"$46,200.00","$80,000.00","$42,100.00","$62,600.00","$99,500.00","$121,000.00"
+University of Illinois at Urbana-Champaign (UIUC),Party,"$52,900.00","$96,100.00","$48,200.00","$68,900.00","$132,000.00","$177,000.00"
+Ohio University,Party,"$42,200.00","$73,400.00","$36,600.00","$52,800.00","$106,000.00","$150,000.00"
+Bucknell University,Liberal Arts,"$54,100.00","$110,000.00","$62,800.00","$80,600.00","$156,000.00","$251,000.00"
+Colgate University,Liberal Arts,"$52,800.00","$108,000.00","$60,000.00","$76,700.00","$167,000.00","$265,000.00"
+Amherst College,Liberal Arts,"$54,500.00","$107,000.00",N/A,"$84,900.00","$162,000.00",N/A
+Lafayette College,Liberal Arts,"$53,900.00","$107,000.00","$70,600.00","$79,300.00","$144,000.00","$204,000.00"
+Bowdoin College,Liberal Arts,"$48,100.00","$107,000.00",N/A,"$74,600.00","$146,000.00",N/A
+College of the Holy Cross,Liberal Arts,"$50,200.00","$106,000.00",N/A,"$65,600.00","$143,000.00",N/A
+Washington and Lee University,Liberal Arts,"$53,600.00","$104,000.00",N/A,"$82,800.00","$146,000.00",N/A
+Swarthmore College,Liberal Arts,"$49,700.00","$104,000.00",N/A,"$67,200.00","$167,000.00",N/A
+Davidson College,Liberal Arts,"$46,100.00","$104,000.00",N/A,"$70,500.00","$146,000.00",N/A
+Carleton College,Liberal Arts,"$47,500.00","$103,000.00",N/A,"$69,400.00","$141,000.00",N/A
+Williams College,Liberal Arts,"$51,700.00","$102,000.00",N/A,"$76,400.00","$143,000.00",N/A
+Pomona College,Liberal Arts,"$48,600.00","$101,000.00",N/A,"$63,300.00","$161,000.00",N/A
+Bates College,Liberal Arts,"$47,300.00","$96,500.00",N/A,"$60,700.00","$162,000.00",N/A
+University of Richmond,Liberal Arts,"$48,600.00","$94,600.00","$44,500.00","$59,400.00","$151,000.00","$211,000.00"
+Vassar College,Liberal Arts,"$46,000.00","$94,600.00",N/A,"$60,600.00","$123,000.00",N/A
+Middlebury College,Liberal Arts,"$47,700.00","$94,200.00",N/A,"$69,100.00","$129,000.00",N/A
+Mount Holyoke College,Liberal Arts,"$42,400.00","$94,100.00",N/A,"$57,100.00","$131,000.00",N/A
+Franklin and Marshall College,Liberal Arts,"$49,100.00","$92,800.00",N/A,"$55,800.00","$185,000.00",N/A
+Colby College,Liberal Arts,"$46,400.00","$85,800.00",N/A,"$63,500.00","$129,000.00",N/A
+Smith College,Liberal Arts,"$44,000.00","$83,900.00","$45,100.00","$59,800.00","$129,000.00","$184,000.00"
+Hamilton College,Liberal Arts,"$49,200.00","$83,700.00",N/A,"$51,900.00","$123,000.00",N/A
+Randolph-Macon College,Liberal Arts,"$42,600.00","$83,600.00",N/A,"$54,100.00","$123,000.00",N/A
+Wellesley College,Liberal Arts,"$42,800.00","$83,500.00",N/A,"$58,600.00","$125,000.00",N/A
+Denison University,Liberal Arts,"$42,000.00","$83,500.00",N/A,"$62,100.00","$122,000.00",N/A
+Oberlin College,Liberal Arts,"$43,400.00","$81,600.00",N/A,"$46,400.00","$128,000.00",N/A
+University of Puget Sound,Liberal Arts,"$46,600.00","$81,500.00","$48,900.00","$60,100.00","$104,000.00","$137,000.00"
+Colorado College (CC),Liberal Arts,"$38,500.00","$81,400.00",N/A,"$43,000.00","$148,000.00",N/A
+Reed College,Liberal Arts,"$40,500.00","$81,100.00",N/A,"$67,400.00","$101,000.00",N/A
+Grinnell College,Liberal Arts,"$42,600.00","$76,600.00",N/A,"$65,100.00","$116,000.00",N/A
+Skidmore College,Liberal Arts,"$41,600.00","$74,600.00",N/A,"$42,800.00","$147,000.00",N/A
+Evergreen State College,Liberal Arts,"$39,500.00","$63,900.00","$38,800.00","$47,200.00","$91,600.00","$120,000.00"
+Dartmouth College,Ivy League,"$58,000.00","$134,000.00","$63,100.00","$90,200.00","$234,000.00","$321,000.00"
+Princeton University,Ivy League,"$66,500.00","$131,000.00","$68,900.00","$100,000.00","$190,000.00","$261,000.00"
+Yale University,Ivy League,"$59,100.00","$126,000.00","$58,000.00","$80,600.00","$198,000.00","$326,000.00"
+Harvard University,Ivy League,"$63,400.00","$124,000.00","$54,800.00","$86,200.00","$179,000.00","$288,000.00"
+University of Pennsylvania,Ivy League,"$60,900.00","$120,000.00","$55,900.00","$79,200.00","$192,000.00","$282,000.00"
+Cornell University,Ivy League,"$60,300.00","$110,000.00","$56,800.00","$79,800.00","$160,000.00","$210,000.00"
+Brown University,Ivy League,"$56,200.00","$109,000.00","$55,400.00","$74,400.00","$159,000.00","$228,000.00"
+Columbia University,Ivy League,"$59,400.00","$107,000.00","$50,300.00","$71,900.00","$161,000.00","$241,000.00"
+University of Virginia (UVA),State,"$52,700.00","$103,000.00","$52,200.00","$71,800.00","$146,000.00","$215,000.00"
+University of California at Los Angeles (UCLA),State,"$52,600.00","$101,000.00","$51,300.00","$72,500.00","$139,000.00","$193,000.00"
+University of Colorado - Boulder (UCB),State,"$47,100.00","$97,600.00","$51,600.00","$69,000.00","$128,000.00","$187,000.00"
+University of Illinois at Urbana-Champaign (UIUC),State,"$52,900.00","$96,100.00","$48,200.00","$68,900.00","$132,000.00","$177,000.00"
+Texas A&M University,State,"$49,700.00","$96,100.00","$51,100.00","$71,300.00","$131,000.00","$171,000.00"
+Binghamton University,State,"$53,600.00","$95,900.00","$50,900.00","$71,200.00","$146,000.00","$201,000.00"
+University of Missouri - Rolla (UMR),State,"$57,100.00","$95,800.00","$67,600.00","$80,400.00","$122,000.00","$166,000.00"
+San Jose State University (SJSU),State,"$53,500.00","$95,600.00","$50,700.00","$70,500.00","$122,000.00","$156,000.00"
+State University of New York (SUNY) at Albany,State,"$44,500.00","$92,200.00","$47,000.00","$63,100.00","$135,000.00","$209,000.00"
+Rutgers University,State,"$50,300.00","$91,800.00","$48,100.00","$65,100.00","$128,000.00","$176,000.00"
+Purdue University,State,"$51,400.00","$90,500.00","$49,900.00","$67,400.00","$121,000.00","$168,000.00"
+University of Connecticut (UConn),State,"$48,000.00","$88,800.00","$46,100.00","$66,400.00","$120,000.00","$162,000.00"
+University of Massachusetts (UMass) - Amherst,State,"$46,600.00","$88,200.00","$43,100.00","$61,300.00","$122,000.00","$168,000.00"
+University of Massachusetts (UMass) - Lowell,State,"$45,400.00","$86,600.00","$50,900.00","$65,000.00","$113,000.00","$158,000.00"
+Pittsburg State University,State,"$40,400.00","$58,200.00","$25,600.00","$46,000.00","$84,600.00","$117,000.00"
