@@ -369,775 +369,111 @@ summary {
 <div id="data" class="section level1">
 <h1>Data</h1>
 <p>The data that I am working with concern the ratings of professors across different colleges, and the median salaries of graduates of those colleges.</p>
-<p>The ratings data I scraped from the popular site Rate My Professor:</p>
-<pre class="r"><code>professors</code></pre>
-<pre><code>##                          name rating difficulty               department
-## 1                Clark Colton   1.90       4.20              Engineering
-## 2               Herbert Sawin   3.83       3.67              Engineering
-## 3              Timothy Swager   3.07       3.86                Chemistry
-## 4              Donald Sadoway   4.04       2.45              Engineering
-## 5             Wolfie Ketterle   4.30       3.50                  Physics
-## 6               Muriel Medard   3.10       3.90              Engineering
-## 7                Albert Meyer   3.00       1.50         Computer Science
-## 8              Michael Sipser   5.00       2.90              Mathematics
-## 9               David Jerison   3.80       2.80              Mathematics
-## 10           Gerald Schneider   4.00       1.00            Not Specified
-## 11            Richard Wurtman   4.50       3.00                  Biology
-## 12              Anant Agarwal   4.30       2.30              Engineering
-## 13              Rodney Brooks   4.10       2.40         Computer Science
-## 14                Jesus Alamo   3.70       3.10              Engineering
-## 15        Shafrira Goldwasser   3.30       3.60         Computer Science
-## 16                  Paul Gray   4.43       2.00              Engineering
-## 17            Alan Grodzinsky   4.30       3.50              Engineering
-## 18             Daniel Jackson   4.20       3.00         Computer Science
-## 19                Dina Katabi   4.17       2.00         Computer Science
-## 20              Robert Miller   5.00       2.67         Computer Science
-## 21              Robert Morris   5.00       4.00         Computer Science
-## 22            Asuman Ozdaglar   1.50       3.50              Engineering
-## 23             L. Rafael Reif   4.70       3.70              Engineering
-## 24              Ronald Rivest   4.80       2.50         Computer Science
-## 25             Charles Sodini   2.00       3.70              Engineering
-## 26            Kenneth Stevens   3.75       2.00              Engineering
-## 27            Peter Szolovits   4.20       3.20           Health Science
-## 28               Joel Voldman   3.30       4.00              Engineering
-## 29               Stephen Ward   2.88       2.50         Computer Science
-## 30             Arthur Mattuck   4.35       3.47              Mathematics
-## 31             Woodie Flowers   3.67       3.67              Engineering
-## 32            John Ochsendorf   5.00       2.50             Architecture
-## 33                Ikue Shingu   3.83       3.83                Languages
-## 34                Alvin Kibel   2.40       4.40               Literature
-## 35               Thomas Allen   4.00       3.00                 Business
-## 36             Moungi Bawendi   4.00       2.70                Chemistry
-## 37              Cathy Drennan   3.20       2.60                Chemistry
-## 38           Haynes R. Miller   3.00       3.50              Mathematics
-## 39         Hartley Jr. Rogers   3.60       2.40              Mathematics
-## 40            Michael Gennert   3.20       2.70         Computer Science
-## 41                 Susan Vick   4.30       2.70                  English
-## 42           Michael Ciaraldi   3.41       2.58         Computer Science
-## 43               Dina Solitro   4.45       1.72              Mathematics
-## 44           Michael Radzicki   3.00       3.10                Economics
-## 45               Joel Brattin   3.00       4.00                  English
-## 46                Wesley Mott   3.97       2.40                  English
-## 47                 Zhikun Hou   2.20       2.80              Engineering
-## 48               William Farr   4.80       2.60              Mathematics
-## 49              Robert Norton   4.07       4.14              Engineering
-## 50                  Eben Cobb   3.71       2.53              Engineering
-## 51           Raymond Hagglund   2.20       1.90              Engineering
-## 52             Kathryn Fisler   4.00       3.60         Computer Science
-## 53              Edward Clancy   3.83       3.21              Engineering
-## 54            Bogdan Vernescu   3.93       2.85              Mathematics
-## 55          Peter Christopher   3.90       3.00              Mathematics
-## 56            Kent Ljungquist   4.94       2.35                  English
-## 57        Vladimir Dobrushkin   1.66       3.44         Computer Science
-## 58              Mark Claypool   4.14       3.73         Computer Science
-## 59            John Kleinsmith   2.81       3.00              Engineering
-## 60             Roger Gottlieb   3.64       2.83               Philosophy
-## 61            George Phillies   2.70       4.40                  Science
-## 62          Mikhail Mikhailov   4.39       2.33         Computer Science
-## 63             William Baller   3.70       2.20                  History
-## 64             Helen Vassallo   4.00       2.50                 Business
-## 65              David Olinger   4.00       3.10              Engineering
-## 66          Makhlouf Makhlouf   3.10       4.10              Engineering
-## 67          Nikolas Kazantzis   4.70       2.90              Engineering
-## 68          Theodore Crusberg   2.77       2.15                  Science
-## 69               Homer Walker   3.23       2.92              Mathematics
-## 70              Daniel Gibson   3.18       3.04                  Science
-## 71                John Wilkes   1.90       2.64           Social Science
-## 72             Joseph Bagshaw   2.79       2.29                  Science
-## 73        Padmanabhan Aravind   3.20       2.70                  Science
-## 74         Christopher Larsen   3.00       3.70              Mathematics
-## 75               John Delorey   4.53       1.41                    Music
-## 76          Guillermo Salazar   3.50       3.20              Engineering
-## 77                David Brown   2.94       3.69         Computer Science
-## 78            Carolann Koleci   4.62       2.89                  Science
-## 79             Domokos Vermes   2.70       3.10              Mathematics
-## 80             Steven Klepper   3.99       3.71                Economics
-## 81             Charles Newman   3.17       3.83              Engineering
-## 82        Juan Jorge Schäffer   2.07       3.67              Mathematics
-## 83               Klaus Sutner   4.30       3.50         Computer Science
-## 84               Alan Kennedy   4.50       2.43                  English
-## 85                Kunal Ghosh   3.55       3.68                  Science
-## 86                 Oded Meyer   4.61       1.67              Mathematics
-## 87                  Naum Kats   4.41       1.27                  History
-## 88                 John Hayes   2.88       2.58               Psychology
-## 89            Charlee Brodsky   3.80       2.40                Fine Arts
-## 90              Eric Anderson   3.06       3.00                Fine Arts
-## 91               Mary Weidner   4.35       2.80                Fine Arts
-## 92               Randy Pausch   4.50       3.38         Computer Science
-## 93                Davin Lafon   4.40       1.40               Philosophy
-## 94            Victor Adamchik   3.28       3.14         Computer Science
-## 95              David Rakison   4.70       2.60               Psychology
-## 96                  Lori Holt   4.00       2.90               Psychology
-## 97                Jim Daniels   3.40       2.70                  English
-## 98             Hilary Masters   4.04       3.75                  English
-## 99             Jane Bernstein   3.50       2.70                  English
-## 100                 J. Devine   4.30       2.80               Humanities
-## 101              Guy Blelloch   4.00       3.60         Computer Science
-## 102              Peter Berget   4.50       3.83                  Science
-## 103            Rami Grossberg   3.07       3.29              Mathematics
-## 104               Russ Walker   3.30       3.00              Mathematics
-## 105              Helmut Vogel   4.50       3.30                  Science
-## 106                 Jimmy Zhu   3.30       3.20              Engineering
-## 107           Stephen Schultz   4.88       1.25                    Music
-## 108             Scott Sandage   4.00       3.00                  History
-## 109            Vicki Helgeson   3.40       3.60               Psychology
-## 110             Steven Rudich   3.61       4.44         Computer Science
-## 111                Paul Karol   2.75       3.72                  Science
-## 112            Milton Cofield   4.03       1.63                 Business
-## 113                John Tolle   3.80       2.87              Mathematics
-## 114               Karen Stump   3.90       3.80                  Science
-## 115            Stephen Totter   4.40       2.20                    Music
-## 116               Tim Hoffman   4.18       2.27         Computer Science
-## 117        Matthew P. Szudzik   4.80       2.30              Mathematics
-## 118                Jack Beuth   3.50       2.80              Engineering
-## 119         Robert F. Sekerka   2.38       3.88                  Physics
-## 120               Donna Brown   3.34       4.07              Engineering
-## 121               Ralph Husby   3.61       2.78                Economics
-## 122           Seth Hutchinson   3.50       3.22              Engineering
-## 123               David Brown   2.50       3.00                Education
-## 124             David Bullock   2.38       4.15                Economics
-## 125              Susan Curtis   2.60       3.40               Accounting
-## 126           A.J. Hildebrand   4.50       2.60              Mathematics
-## 127              Stan Ambrose   2.70       3.00             Anthropology
-## 128               James Kaler   4.69       1.63                  Science
-## 129                Paul Kwiat   4.10       3.30                  Physics
-## 130              Peter Silhan   1.60       3.60                 Business
-## 131              Tracy Sulkin   4.25       2.38        Political Science
-## 132              Brian Gaines   3.04       3.93        Political Science
-## 133             Melissa Orlie   3.17       4.00        Political Science
-## 134             Scott Althaus   3.90       3.90        Political Science
-## 135            Steven Zumdahl   3.50       3.00                  Science
-## 136               Bruce Fouke   4.60       2.10                  Science
-## 137            Zachary Elkins   4.13       3.00        Political Science
-## 138             Dave Roediger   3.59       2.24                  History
-## 139          Christine Yerkes   3.15       3.65                  Science
-## 140             Susan Krische   2.89       3.89               Accounting
-## 141            Thomas Rudolph   3.80       2.30        Political Science
-## 142             Scott Denmark   3.70       4.00                  Science
-## 143         Martin Manalansan   4.10       1.30             Anthropology
-## 144               Beth Morgan   3.08       2.84                  Science
-## 145               Sarita Adve   3.97       3.28         Computer Science
-## 146            Thomas Gambill   3.50       2.50         Computer Science
-## 147             Gabriel Solis   3.30       2.10                    Music
-## 148            S. Max Edelson   4.20       2.60                  History
-## 149          Donna Charlevoix   3.55       2.61                  Science
-## 150              Pete Griffin   4.89       2.39                    Music
-## 151           Elliot Chasanov   2.13       3.50                    Music
-## 152              Guemlan Choi   2.85       2.15              Mathematics
-## 153              James Hansen   4.00       3.10                  English
-## 154                Ira Carmen   4.30       4.30        Political Science
-## 155               Tim Newcomb   3.00       2.50                  English
-## 156          William Bernhard   3.63       2.67        Political Science
-## 157          Robert Weissberg   2.94       2.56        Political Science
-## 158           Mark Roszkowski   3.29       3.67                 Business
-## 159                 Bart Taub   2.65       3.69                Economics
-## 160           Laurence Davies   4.30       2.70                  English
-## 161              John Pfister   5.00       2.33               Psychology
-## 162             John Watanabe   4.75       3.50             Anthropology
-## 163           Erland Schulson   2.00       3.50              Engineering
-## 164               Bill Kelley   3.33       2.33               Psychology
-## 165           Adrian Randolph   4.08       3.33              Art History
-## 166             Terry Osborne   4.29       3.00                  English
-## 167            Fillia Makedon   3.00       2.00         Computer Science
-## 168            Prasad Jayanti   4.76       2.88         Computer Science
-## 169                 Don Pease   3.31       2.88               Humanities
-## 170              David Glueck   4.10       2.80                Chemistry
-## 171                 John Winn   3.17       3.67                Chemistry
-## 172           Deborah Nichols   2.40       3.60             Anthropology
-## 173              Marlene Heck   5.00       4.00                Fine Arts
-## 174                Yale Cohen   2.85       3.10               Psychology
-## 175            Patricia McKee   3.75       3.00                  English
-## 176           Barbara Dimmick   3.25       4.50                  English
-## 177                Sergei Kan   3.00       2.50             Anthropology
-## 178              Thomas Luxon   4.22       3.11                  English
-## 179                 Peter Tse   5.00       3.00               Psychology
-## 180            Douglass Moody   4.80       1.60                  English
-## 181             Hoyt Alverson   2.10       3.80             Anthropology
-## 182                  Lee Lynd   2.75       2.50              Engineering
-## 183                David Kotz   2.90       4.00         Computer Science
-## 184           David Laguardia   4.10       2.80                Languages
-## 185              William Wade   2.75       4.50                  Science
-## 186             Andrew McCann   4.33       2.67                  English
-## 187           Mary Desjardins   4.75       3.00                     Film
-## 188              Misagh Parsa   4.08       3.50                Sociology
-## 189           Ronald Edsforth   2.92       3.67                  History
-## 190             Colleen Boggs   4.50       3.50                  English
-## 191           Stephanie Boone   5.00       4.70                  English
-## 192            Michael Chaney   4.50       5.00                  English
-## 193               Joshua Katz   5.00       3.30                 Classics
-## 194          Jennifer Johnson   4.90       3.00              Mathematics
-## 195             Morton Kostin   2.80       2.60              Engineering
-## 196             Robert Bagley   4.50       3.20              Art History
-## 197                 Ron Comer   4.32       2.50               Psychology
-## 198               James Gould   3.05       3.00                  Science
-## 199         Martin Semmelhack   3.50       3.90                  Science
-## 200            Maitland Jones   3.71       4.33                Chemistry
-## 201              Jamie Rankin   5.00       3.50                Languages
-## 202              Molly Greene   4.90       3.60                  History
-## 203              Susan Naquin   3.75       2.00                  History
-## 204            William Jordan   4.67       3.83                  History
-## 205             Robert Kaster   3.50       3.60                 Classics
-## 206         Alexander Nehamas   4.50       4.00               Philosophy
-## 207                Lyman Page   4.89       2.56                  Physics
-## 208               Cornel West   4.10       3.60           Ethnic Studies
-## 209          Francois Rigolot   4.50       3.00                Languages
-## 210              Paul Krugman   3.00       2.90                Economics
-## 211              Gideon Rosen   4.23       3.27               Philosophy
-## 212              Peter Singer   3.20       2.80               Philosophy
-## 213                 Gary Bass   4.50       3.38        Political Science
-## 214               John Conway   3.08       4.00              Mathematics
-## 215            Francois Bovon   3.50       3.00                 Theology
-## 216                  Al Acres   4.70       3.30              Art History
-## 217            Michael Gordin   3.00       3.00                  History
-## 218             Daniel Marlow   4.70       2.80                  Physics
-## 219                 Ed Zschau   3.90       2.40              Engineering
-## 220         Pablo Debenedetti   4.70       3.00              Engineering
-## 221                 Mark Rose   3.00       3.67                  Biology
-## 222            Hans Halvorson   4.40       3.60               Philosophy
-## 223              Amaney Jamal   3.67       3.33        Political Science
-## 224             Charlie Gross   3.50       3.70               Psychology
-## 225              Kiki Jamison   4.33       3.83        Political Science
-## 226             Michal Cadden   3.88       3.50                  Theater
-## 227            Miguel Centeno   4.90       3.00                Sociology
-## 228                Sophie Gee   3.14       3.43                  English
-## 229           John V. Fleming   3.40       3.20                  English
-## 230             John Merriman   3.64       2.71                  History
-## 231            Glenda Gilmore   4.44       3.63                  History
-## 232              Brian Scholl   4.20       2.90               Psychology
-## 233              Joseph Chang   3.83       2.50              Mathematics
-## 234          Timothy Robinson   4.05       2.64                  English
-## 235              Lourdes Sabe   4.67       3.33                  Spanish
-## 236                Paul Bloom   3.60       2.90               Psychology
-## 237              E-L Pelkonen   2.80       2.60             Architecture
-## 238            Sophia Gruzdys   3.50       2.90             Architecture
-## 239              Donald Kagan   4.69       3.85                  History
-## 240               Ed Mitchell   2.00       3.50             Architecture
-## 241              Craig Wright   4.30       2.20                    Music
-## 242              Mark Johnson   3.00       3.63                  Science
-## 243             Frances Brent   3.63       3.50                  English
-## 244              Bernard Bate   4.30       2.80             Anthropology
-## 245             David Anjelly   5.00       5.00              Mathematics
-## 246           Karsten Harries   5.00       3.00               Philosophy
-## 247             John Faragher   2.55       3.30                  History
-## 248          Rosemarie Morgan   4.67       3.00                  English
-## 249          Sybil Alexandrov   4.20       2.60 African-American Studies
-## 250             Henry Sussman   3.80       2.30               Literature
-## 251               Ruth Koizim   5.00       3.50                Languages
-## 252             David Cameron   3.30       3.50        Political Science
-## 253              Harold Bloom   3.54       3.23                  English
-## 254             Patrick Loria   3.13       3.50                Chemistry
-## 255            Michael Auslin   3.30       3.60                  History
-## 256          Justine Hastings   2.04       3.64                Economics
-## 257               Edwin Duval   5.00       4.00                Languages
-## 258           Harold Attridge   4.50       5.00                 Theology
-## 259              Charles Hill   2.78       2.56    International Studies
-## 260            Richard Deming   3.56       4.11                  English
-## 261        Alexander Beecroft   3.80       2.40               Literature
-## 262         Ayala Dostorevsky   5.00       2.50                Languages
-## 263                Kyle Bates   3.79       2.75              Engineering
-## 264               Glenn Cohen   3.83       3.33                      Law
-## 265         Robert Neugeboren   2.54       3.80                Economics
-## 266               Marc Hauser   4.21       2.81               Psychology
-## 267              Roger Porter   4.75       2.50        Political Science
-## 268             Melissa Barry   3.81       1.88               Philosophy
-## 269              Gerald Sacks   3.90       1.80              Mathematics
-## 270           Warren Goldfarb   4.50       2.80               Philosophy
-## 271          Kathleen Coleman   4.63       2.25                Languages
-## 272             Michael Flier   2.20       4.10                Languages
-## 273                Rob Austin   4.63       2.38                 Business
-## 274               Anne Monius   4.44       3.78                 Theology
-## 275          Catherine Corman   3.88       3.25                  History
-## 276             Charles Ducey   2.25       3.17                Education
-## 277           Marjorie Garber   3.30       2.80                  English
-## 278          Maryellen Ruvolo   3.50       3.17                  Biology
-## 279            Lawrence Buell   3.38       3.12                  English
-## 280            Phillip Fisher   3.50       3.20                  English
-## 281            David Carrasco   4.90       2.80                 Theology
-## 282          Martin Feldstein   2.92       2.00                Economics
-## 283             Margo Seltzer   4.40       3.00         Computer Science
-## 284       Christine Korsgaard   3.50       3.30               Philosophy
-## 285             Daniel Fisher   1.60       4.60                  Physics
-## 286             Howard Georgi   3.90       3.60                  Physics
-## 287             Elaine Scarry   3.38       2.43                  English
-## 288               Kath Weston   3.80       2.60          Women&#39;s Studies
-## 289              Leo Damrosch   4.60       2.80                  English
-## 290            Cynthia Friend   2.25       3.33                Chemistry
-## 291             Michael Smith   4.50       3.50         Computer Science
-## 292          Harvey Mansfield   4.30       4.10        Political Science
-## 293             Helen Vendler   4.20       3.70                  English
-## 294        Stephen Greenblatt   3.20       2.20                  English
-## 295         Sacvan Bercovitch   4.45       3.10                  English
-## 296             Homi K. Bhaba   2.36       3.27                  English
-## 297           Daniel Donoghue   4.67       3.17                  English
-## 298                Ed Glaeser   2.54       3.83                Economics
-## 299             Gordon Teskey   4.43       2.57                  English
-## 300             Glenda Carpio   5.00       2.70                  English
-## 301           Charles Henebry   2.83       3.50                  Writing
-## 302             Eric Jacobsen   4.88       4.00                Chemistry
-## 303               . Zlotowski   2.46       3.69                Education
-## 304               James Wolfe   3.58       3.90         Computer Science
-## 305               John Hanson   2.00       2.50               Journalism
-## 306           Michael Pearson   3.55       3.09            Communication
-## 307            Michael Brooks   3.84       1.86                  English
-## 308             Charles Grove   4.32       3.45                Languages
-## 309      Yochanan Shachmurove   2.00       3.70                Economics
-## 310                 Rudra Sil   4.46       2.79        Political Science
-## 311           Dennis Williams   3.82       2.20                    Music
-## 312            Deborah Frantz   3.33       3.56              Mathematics
-## 313              Diane Jensen   3.48       1.98     Speech Communication
-## 314               Madan Varma   2.10       4.30                  Physics
-## 315         Janice Chernekoff   3.63       3.17                  English
-## 316             Stephen Welch   3.78       2.13                 Business
-## 317           Walter Chandler   4.57       1.90                 Business
-## 318           Ralph Rodriguez   4.80       3.16                 Business
-## 319          Rani Selvanathan   1.80       3.70                 Business
-## 320            Kevin Dunleavy   4.00       2.28                Economics
-## 321            Madeline Smith   2.09       4.04                  English
-## 322               Edward Vitz   2.08       4.29                Chemistry
-## 323               G. D. Rains   3.50       3.10               Psychology
-## 324              Anne Zayaitz   4.55       3.22                  Biology
-## 325             William Towne   4.10       3.40                  Biology
-## 326                 Jen Bacon   4.04       3.00                  English
-## 327          Russell Vreeland   1.97       4.79                  Science
-## 328               Tom Wickham   4.56       1.98                  Science
-## 329             Chad Kauffman   4.50       3.00            Earth Science
-## 330                Dan Benson   4.07       1.95               Management
-## 331              John Hamrick   4.29       2.00               Management
-## 332           Elizabeth Rogol   4.10       3.00                Marketing
-## 333           Jonathan Kramer   4.10       3.30                 Business
-## 334         Arifeen Daneshyar   3.20       3.75                Economics
-## 335           Timothy Running   4.84       1.26                    Music
-## 336        William Passwaters   3.00       3.40                  Science
-## 337               John Helion   4.81       1.78              Physical Ed
-## 338                 Frank Fry   3.50       3.20              Physical Ed
-## 339          Thomas Mastrilli   3.53       2.62                Education
-## 340                Paul Smith   1.81       3.62           Health Science
-## 341            William Hewitt   4.46       2.44                  History
-## 342           Scott Balthazar   3.01       2.82                    Music
-## 343               Debra Fried   3.58       2.77                  English
-## 344            Judy Bernstock   3.80       2.30              Art History
-## 345            Antje Baeumner   2.71       3.54              Engineering
-## 346          Glenn Altschuler   3.50       2.70                  History
-## 347                Jean Locey   2.90       3.20                Fine Arts
-## 348         T. Michael Duncan   4.13       3.83              Engineering
-## 349             Jim Shapleigh   3.60       2.60                  Science
-## 350           Claudia Lazzaro   3.83       3.17              Art History
-## 351             Laura Meixner   4.25       2.75              Art History
-## 352          Loretta Carrillo   4.25       2.25               Literature
-## 353                Sue Merkel   2.40       3.40                  Science
-## 354              Thomas Owens   2.68       4.38                  Science
-## 355             Barry Strauss   4.50       2.90                  History
-## 356              Michel Louge   2.61       3.78              Engineering
-## 357             Bernd Lambert   4.57       2.14             Anthropology
-## 358             Steve Jackson   3.04       2.43                  History
-## 359            David Schwartz   3.11       3.27         Computer Science
-## 360             James Cutting   3.90       3.80               Psychology
-## 361                 Len Gross   4.17       3.00              Mathematics
-## 362             Leigh Phoenix   2.90       3.00              Engineering
-## 363         Rick Allmendinger   4.60       3.40                  Science
-## 364              Michael Gold   3.57       4.59                      Law
-## 365               Tim Devoogd   3.00       4.00               Psychology
-## 366                 Tim Fahey   3.54       2.18                  Science
-## 367              Alex Flecker   3.30       2.40                  Science
-## 368           Charles Walcott   4.12       3.44                  Science
-## 369                Thomas Fox   4.30       3.60                  Science
-## 370        Stephen Hilgartner   4.00       2.40                  Science
-## 371             Sam Bacharach   4.33       1.67           Social Science
-## 372                 Alan Bell   4.37       3.13                  Science
-## 373             Theodore Lowi   3.14       2.68        Political Science
-## 374            Munther Younes   4.07       3.50                Languages
-## 375          Timothy Campbell   3.00       4.00                Languages
-## 376            Marilyn Migiel   4.60       2.50                Languages
-## 377   Flaminia Cervesi-Mccobb   4.50       2.50                Languages
-## 378               Bruce Kusse   4.22       3.78              Engineering
-## 379           Vaclav Kostroun   2.33       3.50              Engineering
-## 380            Robert Terrell   3.70       2.70              Mathematics
-## 381                 David Zax   1.80       3.80                  Science
-## 382 Christine Schelhas-Miller   3.62       1.97               Psychology
-##                                        college
-## 1        Massachusetts Institute of Technology
-## 2        Massachusetts Institute of Technology
-## 3        Massachusetts Institute of Technology
-## 4        Massachusetts Institute of Technology
-## 5        Massachusetts Institute of Technology
-## 6        Massachusetts Institute of Technology
-## 7        Massachusetts Institute of Technology
-## 8        Massachusetts Institute of Technology
-## 9        Massachusetts Institute of Technology
-## 10       Massachusetts Institute of Technology
-## 11       Massachusetts Institute of Technology
-## 12       Massachusetts Institute of Technology
-## 13       Massachusetts Institute of Technology
-## 14       Massachusetts Institute of Technology
-## 15       Massachusetts Institute of Technology
-## 16       Massachusetts Institute of Technology
-## 17       Massachusetts Institute of Technology
-## 18       Massachusetts Institute of Technology
-## 19       Massachusetts Institute of Technology
-## 20       Massachusetts Institute of Technology
-## 21       Massachusetts Institute of Technology
-## 22       Massachusetts Institute of Technology
-## 23       Massachusetts Institute of Technology
-## 24       Massachusetts Institute of Technology
-## 25       Massachusetts Institute of Technology
-## 26       Massachusetts Institute of Technology
-## 27       Massachusetts Institute of Technology
-## 28       Massachusetts Institute of Technology
-## 29       Massachusetts Institute of Technology
-## 30       Massachusetts Institute of Technology
-## 31       Massachusetts Institute of Technology
-## 32       Massachusetts Institute of Technology
-## 33       Massachusetts Institute of Technology
-## 34       Massachusetts Institute of Technology
-## 35       Massachusetts Institute of Technology
-## 36       Massachusetts Institute of Technology
-## 37       Massachusetts Institute of Technology
-## 38       Massachusetts Institute of Technology
-## 39       Massachusetts Institute of Technology
-## 40             Worcester Polytechnic Institute
-## 41             Worcester Polytechnic Institute
-## 42             Worcester Polytechnic Institute
-## 43             Worcester Polytechnic Institute
-## 44             Worcester Polytechnic Institute
-## 45             Worcester Polytechnic Institute
-## 46             Worcester Polytechnic Institute
-## 47             Worcester Polytechnic Institute
-## 48             Worcester Polytechnic Institute
-## 49             Worcester Polytechnic Institute
-## 50             Worcester Polytechnic Institute
-## 51             Worcester Polytechnic Institute
-## 52             Worcester Polytechnic Institute
-## 53             Worcester Polytechnic Institute
-## 54             Worcester Polytechnic Institute
-## 55             Worcester Polytechnic Institute
-## 56             Worcester Polytechnic Institute
-## 57             Worcester Polytechnic Institute
-## 58             Worcester Polytechnic Institute
-## 59             Worcester Polytechnic Institute
-## 60             Worcester Polytechnic Institute
-## 61             Worcester Polytechnic Institute
-## 62             Worcester Polytechnic Institute
-## 63             Worcester Polytechnic Institute
-## 64             Worcester Polytechnic Institute
-## 65             Worcester Polytechnic Institute
-## 66             Worcester Polytechnic Institute
-## 67             Worcester Polytechnic Institute
-## 68             Worcester Polytechnic Institute
-## 69             Worcester Polytechnic Institute
-## 70             Worcester Polytechnic Institute
-## 71             Worcester Polytechnic Institute
-## 72             Worcester Polytechnic Institute
-## 73             Worcester Polytechnic Institute
-## 74             Worcester Polytechnic Institute
-## 75             Worcester Polytechnic Institute
-## 76             Worcester Polytechnic Institute
-## 77             Worcester Polytechnic Institute
-## 78             Worcester Polytechnic Institute
-## 79             Worcester Polytechnic Institute
-## 80                  Carnegie Mellon University
-## 81                  Carnegie Mellon University
-## 82                  Carnegie Mellon University
-## 83                  Carnegie Mellon University
-## 84                  Carnegie Mellon University
-## 85                  Carnegie Mellon University
-## 86                  Carnegie Mellon University
-## 87                  Carnegie Mellon University
-## 88                  Carnegie Mellon University
-## 89                  Carnegie Mellon University
-## 90                  Carnegie Mellon University
-## 91                  Carnegie Mellon University
-## 92                  Carnegie Mellon University
-## 93                  Carnegie Mellon University
-## 94                  Carnegie Mellon University
-## 95                  Carnegie Mellon University
-## 96                  Carnegie Mellon University
-## 97                  Carnegie Mellon University
-## 98                  Carnegie Mellon University
-## 99                  Carnegie Mellon University
-## 100                 Carnegie Mellon University
-## 101                 Carnegie Mellon University
-## 102                 Carnegie Mellon University
-## 103                 Carnegie Mellon University
-## 104                 Carnegie Mellon University
-## 105                 Carnegie Mellon University
-## 106                 Carnegie Mellon University
-## 107                 Carnegie Mellon University
-## 108                 Carnegie Mellon University
-## 109                 Carnegie Mellon University
-## 110                 Carnegie Mellon University
-## 111                 Carnegie Mellon University
-## 112                 Carnegie Mellon University
-## 113                 Carnegie Mellon University
-## 114                 Carnegie Mellon University
-## 115                 Carnegie Mellon University
-## 116                 Carnegie Mellon University
-## 117                 Carnegie Mellon University
-## 118                 Carnegie Mellon University
-## 119                 Carnegie Mellon University
-## 120 University of Illinois at Urbana-Champaign
-## 121 University of Illinois at Urbana-Champaign
-## 122 University of Illinois at Urbana-Champaign
-## 123 University of Illinois at Urbana-Champaign
-## 124 University of Illinois at Urbana-Champaign
-## 125 University of Illinois at Urbana-Champaign
-## 126 University of Illinois at Urbana-Champaign
-## 127 University of Illinois at Urbana-Champaign
-## 128 University of Illinois at Urbana-Champaign
-## 129 University of Illinois at Urbana-Champaign
-## 130 University of Illinois at Urbana-Champaign
-## 131 University of Illinois at Urbana-Champaign
-## 132 University of Illinois at Urbana-Champaign
-## 133 University of Illinois at Urbana-Champaign
-## 134 University of Illinois at Urbana-Champaign
-## 135 University of Illinois at Urbana-Champaign
-## 136 University of Illinois at Urbana-Champaign
-## 137 University of Illinois at Urbana-Champaign
-## 138 University of Illinois at Urbana-Champaign
-## 139 University of Illinois at Urbana-Champaign
-## 140 University of Illinois at Urbana-Champaign
-## 141 University of Illinois at Urbana-Champaign
-## 142 University of Illinois at Urbana-Champaign
-## 143 University of Illinois at Urbana-Champaign
-## 144 University of Illinois at Urbana-Champaign
-## 145 University of Illinois at Urbana-Champaign
-## 146 University of Illinois at Urbana-Champaign
-## 147 University of Illinois at Urbana-Champaign
-## 148 University of Illinois at Urbana-Champaign
-## 149 University of Illinois at Urbana-Champaign
-## 150 University of Illinois at Urbana-Champaign
-## 151 University of Illinois at Urbana-Champaign
-## 152 University of Illinois at Urbana-Champaign
-## 153 University of Illinois at Urbana-Champaign
-## 154 University of Illinois at Urbana-Champaign
-## 155 University of Illinois at Urbana-Champaign
-## 156 University of Illinois at Urbana-Champaign
-## 157 University of Illinois at Urbana-Champaign
-## 158 University of Illinois at Urbana-Champaign
-## 159 University of Illinois at Urbana-Champaign
-## 160                          Dartmouth College
-## 161                          Dartmouth College
-## 162                          Dartmouth College
-## 163                          Dartmouth College
-## 164                          Dartmouth College
-## 165                          Dartmouth College
-## 166                          Dartmouth College
-## 167                          Dartmouth College
-## 168                          Dartmouth College
-## 169                          Dartmouth College
-## 170                          Dartmouth College
-## 171                          Dartmouth College
-## 172                          Dartmouth College
-## 173                          Dartmouth College
-## 174                          Dartmouth College
-## 175                          Dartmouth College
-## 176                          Dartmouth College
-## 177                          Dartmouth College
-## 178                          Dartmouth College
-## 179                          Dartmouth College
-## 180                          Dartmouth College
-## 181                          Dartmouth College
-## 182                          Dartmouth College
-## 183                          Dartmouth College
-## 184                          Dartmouth College
-## 185                          Dartmouth College
-## 186                          Dartmouth College
-## 187                          Dartmouth College
-## 188                          Dartmouth College
-## 189                          Dartmouth College
-## 190                          Dartmouth College
-## 191                          Dartmouth College
-## 192                          Dartmouth College
-## 193                       Princeton University
-## 194                       Princeton University
-## 195                       Princeton University
-## 196                       Princeton University
-## 197                       Princeton University
-## 198                       Princeton University
-## 199                       Princeton University
-## 200                       Princeton University
-## 201                       Princeton University
-## 202                       Princeton University
-## 203                       Princeton University
-## 204                       Princeton University
-## 205                       Princeton University
-## 206                       Princeton University
-## 207                       Princeton University
-## 208                       Princeton University
-## 209                       Princeton University
-## 210                       Princeton University
-## 211                       Princeton University
-## 212                       Princeton University
-## 213                       Princeton University
-## 214                       Princeton University
-## 215                       Princeton University
-## 216                       Princeton University
-## 217                       Princeton University
-## 218                       Princeton University
-## 219                       Princeton University
-## 220                       Princeton University
-## 221                       Princeton University
-## 222                       Princeton University
-## 223                       Princeton University
-## 224                       Princeton University
-## 225                       Princeton University
-## 226                       Princeton University
-## 227                       Princeton University
-## 228                       Princeton University
-## 229                       Princeton University
-## 230                            Yale University
-## 231                            Yale University
-## 232                            Yale University
-## 233                            Yale University
-## 234                            Yale University
-## 235                            Yale University
-## 236                            Yale University
-## 237                            Yale University
-## 238                            Yale University
-## 239                            Yale University
-## 240                            Yale University
-## 241                            Yale University
-## 242                            Yale University
-## 243                            Yale University
-## 244                            Yale University
-## 245                            Yale University
-## 246                            Yale University
-## 247                            Yale University
-## 248                            Yale University
-## 249                            Yale University
-## 250                            Yale University
-## 251                            Yale University
-## 252                            Yale University
-## 253                            Yale University
-## 254                            Yale University
-## 255                            Yale University
-## 256                            Yale University
-## 257                            Yale University
-## 258                            Yale University
-## 259                            Yale University
-## 260                            Yale University
-## 261                            Yale University
-## 262                            Yale University
-## 263                         Harvard University
-## 264                         Harvard University
-## 265                         Harvard University
-## 266                         Harvard University
-## 267                         Harvard University
-## 268                         Harvard University
-## 269                         Harvard University
-## 270                         Harvard University
-## 271                         Harvard University
-## 272                         Harvard University
-## 273                         Harvard University
-## 274                         Harvard University
-## 275                         Harvard University
-## 276                         Harvard University
-## 277                         Harvard University
-## 278                         Harvard University
-## 279                         Harvard University
-## 280                         Harvard University
-## 281                         Harvard University
-## 282                         Harvard University
-## 283                         Harvard University
-## 284                         Harvard University
-## 285                         Harvard University
-## 286                         Harvard University
-## 287                         Harvard University
-## 288                         Harvard University
-## 289                         Harvard University
-## 290                         Harvard University
-## 291                         Harvard University
-## 292                         Harvard University
-## 293                         Harvard University
-## 294                         Harvard University
-## 295                         Harvard University
-## 296                         Harvard University
-## 297                         Harvard University
-## 298                         Harvard University
-## 299                         Harvard University
-## 300                         Harvard University
-## 301                         Harvard University
-## 302                         Harvard University
-## 303                 University of Pennsylvania
-## 304                 University of Pennsylvania
-## 305                 University of Pennsylvania
-## 306                 University of Pennsylvania
-## 307                 University of Pennsylvania
-## 308                 University of Pennsylvania
-## 309                 University of Pennsylvania
-## 310                 University of Pennsylvania
-## 311                 University of Pennsylvania
-## 312                 University of Pennsylvania
-## 313                 University of Pennsylvania
-## 314                 University of Pennsylvania
-## 315                 University of Pennsylvania
-## 316                 University of Pennsylvania
-## 317                 University of Pennsylvania
-## 318                 University of Pennsylvania
-## 319                 University of Pennsylvania
-## 320                 University of Pennsylvania
-## 321                 University of Pennsylvania
-## 322                 University of Pennsylvania
-## 323                 University of Pennsylvania
-## 324                 University of Pennsylvania
-## 325                 University of Pennsylvania
-## 326                 University of Pennsylvania
-## 327                 University of Pennsylvania
-## 328                 University of Pennsylvania
-## 329                 University of Pennsylvania
-## 330                 University of Pennsylvania
-## 331                 University of Pennsylvania
-## 332                 University of Pennsylvania
-## 333                 University of Pennsylvania
-## 334                 University of Pennsylvania
-## 335                 University of Pennsylvania
-## 336                 University of Pennsylvania
-## 337                 University of Pennsylvania
-## 338                 University of Pennsylvania
-## 339                 University of Pennsylvania
-## 340                 University of Pennsylvania
-## 341                 University of Pennsylvania
-## 342                 University of Pennsylvania
-## 343                         Cornell University
-## 344                         Cornell University
-## 345                         Cornell University
-## 346                         Cornell University
-## 347                         Cornell University
-## 348                         Cornell University
-## 349                         Cornell University
-## 350                         Cornell University
-## 351                         Cornell University
-## 352                         Cornell University
-## 353                         Cornell University
-## 354                         Cornell University
-## 355                         Cornell University
-## 356                         Cornell University
-## 357                         Cornell University
-## 358                         Cornell University
-## 359                         Cornell University
-## 360                         Cornell University
-## 361                         Cornell University
-## 362                         Cornell University
-## 363                         Cornell University
-## 364                         Cornell University
-## 365                         Cornell University
-## 366                         Cornell University
-## 367                         Cornell University
-## 368                         Cornell University
-## 369                         Cornell University
-## 370                         Cornell University
-## 371                         Cornell University
-## 372                         Cornell University
-## 373                         Cornell University
-## 374                         Cornell University
-## 375                         Cornell University
-## 376                         Cornell University
-## 377                         Cornell University
-## 378                         Cornell University
-## 379                         Cornell University
-## 380                         Cornell University
-## 381                         Cornell University
-## 382                         Cornell University</code></pre>
-<p>The salary data I got from Kaggle:</p>
+<p>The ratings data I scraped from the popular site Rate My Professor. Below is an example of the data scraped.</p>
+<pre class="r"><code>professors %&gt;% head(50) %&gt;% select(-difficulty)</code></pre>
+<pre><code>##                   name rating       department
+## 1         Clark Colton   1.90      Engineering
+## 2        Herbert Sawin   3.83      Engineering
+## 3       Timothy Swager   3.07        Chemistry
+## 4       Donald Sadoway   4.04      Engineering
+## 5      Wolfie Ketterle   4.30          Physics
+## 6        Muriel Medard   3.10      Engineering
+## 7         Albert Meyer   3.00 Computer Science
+## 8       Michael Sipser   5.00      Mathematics
+## 9        David Jerison   3.80      Mathematics
+## 10    Gerald Schneider   4.00    Not Specified
+## 11     Richard Wurtman   4.50          Biology
+## 12       Anant Agarwal   4.30      Engineering
+## 13       Rodney Brooks   4.10 Computer Science
+## 14         Jesus Alamo   3.70      Engineering
+## 15 Shafrira Goldwasser   3.30 Computer Science
+## 16           Paul Gray   4.43      Engineering
+## 17     Alan Grodzinsky   4.30      Engineering
+## 18      Daniel Jackson   4.20 Computer Science
+## 19         Dina Katabi   4.17 Computer Science
+## 20       Robert Miller   5.00 Computer Science
+## 21       Robert Morris   5.00 Computer Science
+## 22     Asuman Ozdaglar   1.50      Engineering
+## 23      L. Rafael Reif   4.70      Engineering
+## 24       Ronald Rivest   4.80 Computer Science
+## 25      Charles Sodini   2.00      Engineering
+## 26     Kenneth Stevens   3.75      Engineering
+## 27     Peter Szolovits   4.20   Health Science
+## 28        Joel Voldman   3.30      Engineering
+## 29        Stephen Ward   2.88 Computer Science
+## 30      Arthur Mattuck   4.35      Mathematics
+## 31      Woodie Flowers   3.67      Engineering
+## 32     John Ochsendorf   5.00     Architecture
+## 33         Ikue Shingu   3.83        Languages
+## 34         Alvin Kibel   2.40       Literature
+## 35        Thomas Allen   4.00         Business
+## 36      Moungi Bawendi   4.00        Chemistry
+## 37       Cathy Drennan   3.20        Chemistry
+## 38    Haynes R. Miller   3.00      Mathematics
+## 39  Hartley Jr. Rogers   3.60      Mathematics
+## 40     Michael Gennert   3.20 Computer Science
+## 41          Susan Vick   4.30          English
+## 42    Michael Ciaraldi   3.41 Computer Science
+## 43        Dina Solitro   4.45      Mathematics
+## 44    Michael Radzicki   3.00        Economics
+## 45        Joel Brattin   3.00          English
+## 46         Wesley Mott   3.97          English
+## 47          Zhikun Hou   2.20      Engineering
+## 48        William Farr   4.80      Mathematics
+## 49       Robert Norton   4.07      Engineering
+## 50           Eben Cobb   3.71      Engineering
+##                                  college
+## 1  Massachusetts Institute of Technology
+## 2  Massachusetts Institute of Technology
+## 3  Massachusetts Institute of Technology
+## 4  Massachusetts Institute of Technology
+## 5  Massachusetts Institute of Technology
+## 6  Massachusetts Institute of Technology
+## 7  Massachusetts Institute of Technology
+## 8  Massachusetts Institute of Technology
+## 9  Massachusetts Institute of Technology
+## 10 Massachusetts Institute of Technology
+## 11 Massachusetts Institute of Technology
+## 12 Massachusetts Institute of Technology
+## 13 Massachusetts Institute of Technology
+## 14 Massachusetts Institute of Technology
+## 15 Massachusetts Institute of Technology
+## 16 Massachusetts Institute of Technology
+## 17 Massachusetts Institute of Technology
+## 18 Massachusetts Institute of Technology
+## 19 Massachusetts Institute of Technology
+## 20 Massachusetts Institute of Technology
+## 21 Massachusetts Institute of Technology
+## 22 Massachusetts Institute of Technology
+## 23 Massachusetts Institute of Technology
+## 24 Massachusetts Institute of Technology
+## 25 Massachusetts Institute of Technology
+## 26 Massachusetts Institute of Technology
+## 27 Massachusetts Institute of Technology
+## 28 Massachusetts Institute of Technology
+## 29 Massachusetts Institute of Technology
+## 30 Massachusetts Institute of Technology
+## 31 Massachusetts Institute of Technology
+## 32 Massachusetts Institute of Technology
+## 33 Massachusetts Institute of Technology
+## 34 Massachusetts Institute of Technology
+## 35 Massachusetts Institute of Technology
+## 36 Massachusetts Institute of Technology
+## 37 Massachusetts Institute of Technology
+## 38 Massachusetts Institute of Technology
+## 39 Massachusetts Institute of Technology
+## 40       Worcester Polytechnic Institute
+## 41       Worcester Polytechnic Institute
+## 42       Worcester Polytechnic Institute
+## 43       Worcester Polytechnic Institute
+## 44       Worcester Polytechnic Institute
+## 45       Worcester Polytechnic Institute
+## 46       Worcester Polytechnic Institute
+## 47       Worcester Polytechnic Institute
+## 48       Worcester Polytechnic Institute
+## 49       Worcester Polytechnic Institute
+## 50       Worcester Polytechnic Institute</code></pre>
+<p>The salary data I got from Kaggle. The dataset was released by the Wall Street Journal.</p>
 <pre class="r"><code>salaries &lt;- read_csv(&quot;./college-salaries/salaries-by-college-type-reduced.csv&quot;)</code></pre>
 <pre><code>## Parsed with column specification:
 ## cols(
@@ -1167,6 +503,7 @@ summary {
 ## # … with 56 more rows, and 4 more variables: `Mid-Career 10th Percentile
 ## #   Salary` &lt;chr&gt;, `Mid-Career 25th Percentile Salary` &lt;chr&gt;, `Mid-Career 75th
 ## #   Percentile Salary` &lt;chr&gt;, `Mid-Career 90th Percentile Salary` &lt;chr&gt;</code></pre>
+<p>I intend to use this data to explore both the differences in distribution of ratings and the relationship between ratings and salary after graduation.</p>
 </div>
 
 

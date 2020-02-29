@@ -38,13 +38,15 @@ professors
 
 The data that I am working with concern the ratings of professors across different colleges, and the median salaries of graduates of those colleges.
 
-The ratings data I scraped from the popular site Rate My Professor:
+The ratings data I scraped from the popular site Rate My Professor. Below is an example of the data scraped.
 ```{r professors}
-professors
+professors %>% head(50) %>% select(-difficulty)
 ```
-The salary data I got from Kaggle:
+The salary data I got from Kaggle. The dataset was released by the Wall Street Journal.
 ```{r salaries}
 salaries <- read_csv("./college-salaries/salaries-by-college-type-reduced.csv")
 salaries
 ```
 
+
+I intend to use this data to explore both the differences in distribution of ratings and the relationship between ratings and salary after graduation.
