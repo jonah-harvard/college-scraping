@@ -12,16 +12,23 @@ professors_list <- fromJSON("./professor_ratings_by_college.json")
 salaries <- read_csv("./college-salaries/salaries-by-college-type-reduced.csv")
 
 nth_prof <- function(n) {
-  if (length(professors_list[n]) >= 1) {
-    return(professors_list[n] %>% as_tibble() %>% pull(1) %>% mutate(college = professors_list[n] %>% as_tibble() %>% colnames()))
+  
+  college_name <- professors_list[n] %>% as_tibble() %>% colnames()
+  
+  # To avoid errors, separate out the cases where there is and 
+  # where there is not data on professor ratings, includes
+  # a row of NA values for colleges with no data
+  
+  if (length(professors_list[[n]]) >= 1) {
+    return(professors_list[n] %>% as_tibble() %>% pull(1) %>% mutate(college = college_name))
   } else {
     return(
         tibble(
-          name = c(NA), 
-          rating = c(NA), 
-          difficulty = c(NA), 
-          department = c(NA), 
-          college = c(professors_list[n] %>% as_tibble() %>% colnames())
+          name = c(NA_character_), 
+          rating = c(NA_integer_), 
+          difficulty = c(NA_integer_), 
+          department = c(NA_character_), 
+          college = c(college_name)
         )
       )
   }
