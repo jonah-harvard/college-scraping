@@ -74,4 +74,26 @@ salaries %>% head(10) %>%  gt() %>%
 ```
 
 
+```{r graphing, warning=FALSE}
+professors <- professors %>% na.omit()
+professors %>% 
+  ggplot(aes(difficulty, rating, color = department)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", aes(group = college)) +
+  theme(legend.position = "none") + 
+  facet_wrap(~college) 
 
+
+carnegie_mellon <- professors %>% filter(college == "Carnegie Mellon University")
+cor.test(carnegie_mellon$difficulty, carnegie_mellon$rating)
+```
+
+```{r distributions}
+histogram_of_college <- function(college_name) {
+  college_data <- professors %>% filter(college == college_name)
+  college_data %>% ggplot(aes(rating)) + geom_histogram()
+}
+
+professors %>% ggplot(aes(rating)) + geom_histogram() + facet_wrap(~ college)
+professors %>% ggplot(aes(difficulty)) + geom_histogram() + facet_wrap(~ college)
+```
