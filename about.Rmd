@@ -80,20 +80,23 @@ professors %>%
   ggplot(aes(difficulty, rating, color = department)) + 
   geom_point() + 
   geom_smooth(method = "lm", aes(group = college)) +
+  labs(
+    title = "Rating as a Function of Difficulty by College",
+    x = "Difficulty",
+    y = "Rating"
+  ) + 
+  theme_classic() + 
   theme(legend.position = "none") + 
   facet_wrap(~college) 
-
-
-carnegie_mellon <- professors %>% filter(college == "Carnegie Mellon University")
-cor.test(carnegie_mellon$difficulty, carnegie_mellon$rating)
 ```
 
 ```{r distributions}
 histogram_of_college <- function(college_name) {
   college_data <- professors %>% filter(college == college_name)
+  print(cor.test(college_data$difficulty, college_data$rating))
   college_data %>% ggplot(aes(rating)) + geom_histogram()
 }
 
-professors %>% ggplot(aes(rating)) + geom_histogram() + facet_wrap(~ college)
-professors %>% ggplot(aes(difficulty)) + geom_histogram() + facet_wrap(~ college)
+professors %>% ggplot(aes(rating)) + geom_histogram() + labs(title = "Rating by College") + facet_wrap(~ college)
+professors %>% ggplot(aes(difficulty)) + geom_histogram() + labs(title = "Difficulty by College") + facet_wrap(~ college)
 ```
