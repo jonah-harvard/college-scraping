@@ -8,8 +8,13 @@ knitr::opts_chunk$set(echo = F)
 library(tidyverse)
 library(jsonlite)
 library(gt)
+library(janitor)
 professors_list <- fromJSON("./professor_ratings_by_college.json")
-salaries <- read_csv("./college-salaries/salaries-by-college-type-reduced.csv")
+salaries <- read_csv(
+  "./college-salaries/salaries-by-college-type-reduced.csv", 
+  na = c("N/A", "NA", NA_character_)
+) %>% 
+  clean_names()
 
 nth_prof <- function(n) {
   
@@ -43,14 +48,12 @@ for (ind in 1:length(professors_list)) {
     professors <- professors %>% union(nth_prof(ind))
   }
 }
-professors
+professors <- professors %>% na.omit()
 ```
 
 # Relationships
 
 ```{r graphing, warning=FALSE}
-professors <- professors %>% na.omit()
-
 professors %>% 
   ggplot(aes(difficulty, rating)) + 
   geom_point() +
@@ -103,4 +106,30 @@ professors %>% ggplot(aes(difficulty)) + geom_histogram() + labs(title = "Diffic
 
 
 When looking at the distribution of difficulties, as one might expect, the data seems more or less normally distributed, with mean 3. On the other hand, however, ratings are skewed strongly to the left.
+
+
+
+```{r salary_data}
+salaries <- salaries %>% mutate(
+  school_name = map_chr(school_name, ~str_remove(., " \\(\\w*\\)")),
+  starting_median_salary = map_dbl(starting_median_salary, ~ as.numeric(str_remove_all(., "[$,]"))),
+  mid_career_median_salary = map_dbl(mid_career_median_salary, ~ as.numeric(str_remove_all(., "[$,]"))),
+  mid_career_10th_percentile_salary = map_dbl(mid_career_10th_percentile_salary, ~ as.numeric(str_remove_all(., "[$,]"))),
+  mid_career_25th_percentile_salary = map_dbl(mid_career_25th_percentile_salary, ~ as.numeric(str_remove_all(., "[$,]"))),
+  mid_career_75th_percentile_salary = map_dbl(mid_career_75th_percentile_salary, ~ as.numeric(str_remove_all(., "[$,]"))),
+  mid_career_90th_percentile_salary = map_dbl(mid_career_90th_percentile_salary, ~ as.numeric(str_remove_all(., "[$,]")))
+)
+professors %>% inner_join(salaries, by=c("college" = "school_name")) %>% 
+  ggplot(aes(difficulty, rating, color = starting_median_salary)) + geom_point()
+```
+
+There is no obvious correlation between the salary data and rating data so far.
+
+
+```{r salary_facet_wrap}
+professors %>% inner_join(salaries, by=c("college" = "school_name")) %>% 
+  ggplot(aes(difficulty, rating, color = starting_median_salary)) + geom_point() + facet_wrap(~starting_median_salary)
+```
+
+Even as we facet wrap, no clear relationship between starting median salary of graduates and ratings vs. difficulty jumps out.
 
