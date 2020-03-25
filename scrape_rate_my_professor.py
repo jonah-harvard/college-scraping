@@ -76,7 +76,6 @@ def parse_college(url):
         page_response = requests.get(f"{SITE}{page_link}")
         page_soup = BeautifulSoup(page_response.content, "html.parser")
         professors += parse_page(page_soup)
-        break
     return professors
 
 

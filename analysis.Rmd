@@ -87,6 +87,28 @@ professors %>%
 
 When faceting by college, however, it becomes a lot clearer that there is, in fact, a negative correlation between difficulty and rating.
 
+
+```{r graphing_by_department}
+professors %>% 
+  ggplot(aes(difficulty, rating, color = college)) + 
+  geom_point() + 
+  
+  # Use geom_smooth to accentuate the relationship between variables
+  
+  geom_smooth(method = "lm", aes(group = department)) +
+  labs(
+    title = "Rating as a Function of Difficulty by College",
+    x = "Difficulty",
+    y = "Rating"
+  ) + 
+  scale_y_continuous(
+    limits = c(0, 5)
+  )+
+  theme_classic() + 
+  theme(legend.position = "none") + 
+  facet_wrap(~department) 
+```
+
 # Distributions
 
 ```{r distributions, message=FALSE}
