@@ -9,7 +9,7 @@ testing <- function() {
 
 
 get_professor_data <- function() {
-  professors_list <- fromJSON("../professor_ratings_by_college.json")
+  professors_list <- fromJSON("./professor_ratings_by_college.json")
  
   
   nth_prof <- function(n) {
@@ -45,9 +45,10 @@ get_professor_data <- function() {
     }
   }
   professors <- professors %>% na.omit()
+  professors
 }
 
-basic_plot <- function() {
+basic_plot <- function(professors) {
   professors %>% 
     ggplot(aes(difficulty, rating)) + 
     geom_point() +
@@ -59,7 +60,7 @@ basic_plot <- function() {
     theme_classic()
 }
 
-plot_facet_wrap <- function() {
+plot_facet_wrap <- function(professors) {
   professors %>% 
     ggplot(aes(difficulty, rating, color = department)) + 
     geom_point() + 
@@ -77,7 +78,7 @@ plot_facet_wrap <- function() {
     facet_wrap(~college) 
 }
 
-histogram_of_college <- function(college_name) {
+histogram_of_college <- function(professors, college_name) {
   college_data <- professors %>% filter(college == college_name)
   # print(cor.test(college_data$difficulty, college_data$rating))
   college_data %>% ggplot(aes(rating)) + geom_histogram()
@@ -105,12 +106,12 @@ get_salary_data <- function() {
   )
 }
 
-plot_with_salary <- function() {
+plot_with_salary <- function(professors, salaries) {
   professors %>% inner_join(salaries, by=c("college" = "school_name")) %>% 
     ggplot(aes(difficulty, rating, color = starting_median_salary)) + geom_point()
 }
 
-plot_with_salary_facet_wrap <- function() {
+plot_with_salary_facet_wrap <- function(professors, salaries) {
   professors %>% inner_join(salaries, by=c("college" = "school_name")) %>% 
     ggplot(aes(difficulty, rating, color = starting_median_salary)) + geom_point() + facet_wrap(~starting_median_salary)
 }
