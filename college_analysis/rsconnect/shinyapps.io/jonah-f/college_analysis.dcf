@@ -1,0 +1,12 @@
+name: college_analysis
+title: college_analysis
+username:
+account: jonah-f
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2050942
+bundleId: 2964642
+url: https://jonah-f.shinyapps.io/college_analysis/
+when: 1585925397.57473
+asMultiple: FALSE
+asStatic: FALSE
