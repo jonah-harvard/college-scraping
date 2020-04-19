@@ -3,6 +3,7 @@ library(jsonlite)
 library(gt)
 library(janitor)
 library(infer)
+library(broom)
 
 get_professor_data <- function() {
   professors_list <- fromJSON("./professor_ratings_by_college.json")
@@ -83,7 +84,7 @@ calculate_cor <- function(professors) {
     pull(rating_difficulty_cor)
   upper <- cors %>% quantile(.975)
   lower <- cors %>% quantile(.025)
-  paste0("(", lower, ", ", upper, ")")
+  paste0("(", round(lower, 3), ", ", round(upper, 3), ")")
 }
 
 plot_lm <- function(professors) {
@@ -112,8 +113,27 @@ histogram_of_college <- function(professors, college_name) {
   college_data %>% ggplot(aes(rating)) + geom_histogram()
 }
 
-# professors %>% ggplot(aes(rating)) + geom_histogram() + labs(title = "Rating by College") #+ facet_wrap(~ college)
-# professors %>% ggplot(aes(difficulty)) + geom_histogram() + labs(title = "Difficulty by College") #+ facet_wrap(~ college)
+dist_rating <- function(professors) {
+  professors %>% 
+    ggplot(aes(rating)) + 
+    geom_histogram() + 
+    theme_classic() + 
+    labs(
+      y = "Count",
+      x = "Rating"
+    ) 
+}
+
+dist_difficulty <- function(professors) {
+  professors %>% 
+    ggplot(aes(difficulty)) + 
+    geom_histogram() + 
+    theme_classic() + 
+    labs(
+      y = "Count",
+      x = "Difficulty"
+    ) 
+}
 
 
 get_salary_data <- function() {
