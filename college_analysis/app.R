@@ -59,6 +59,17 @@ ui <- navbarPage(
                   between difficulty and rating. This supports our hypothesis that 
                   professor rating is negatively correlated with difficulty."
                 )
+            ),
+            tabPanel(
+                "Correlation by College",
+                p("We can repeat this boot strapping method but instead of boot strapping for our entire dataset, 
+                  we can control for each college. If we first group by college, and then treat each college as their own sample,
+                  we can generate 95% confidence intervals for the correlation (using the quantile method) for each college."),
+                gt_output("diff_cor_by_college"),
+                p("After seperating out by college, we can see that the relationship is a lot less clear for 
+                  Princeton, Harvard, Yale, Carnegie Mellon, and even Dartmouth. Because their 95% confidence intervals
+                  contain 0, we can not confidently say without more data what the nature of the relationship between difficulty
+                  and rating is at those colleges.")
             ), 
             tabPanel(
                 "Relationship (Rating Vs. Difficulty)",
@@ -100,6 +111,7 @@ server <- function(input, output) {
     })
     
     output$diff_cor <- renderText({calculate_cor(professors)})
+    output$diff_cor_by_college <- render_gt({cors_by_college(professors)})
     
     output$relationship_diff <- render_gt({plot_lm(professors)})
 }

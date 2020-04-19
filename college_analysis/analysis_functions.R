@@ -4,6 +4,7 @@ library(gt)
 library(janitor)
 library(infer)
 library(broom)
+library(purrr)
 
 get_professor_data <- function() {
   professors_list <- fromJSON("./professor_ratings_by_college.json")
@@ -86,6 +87,36 @@ calculate_cor <- function(professors) {
   lower <- cors %>% quantile(.025)
   paste0("(", round(lower, 3), ", ", round(upper, 3), ")")
 }
+
+cors_by_college <- function(professors) {
+  professors %>% 
+    group_by(college) %>% 
+    nest() %>% 
+    mutate(
+      boot_strap = map(data, ~rep_sample_n(., size=nrow(.), replace = T, reps = 1000)),
+      grouped = map(boot_strap, ~group_by(., replicate)), 
+      cors = map(grouped, ~summarise(., diff_cor = cor(rating, difficulty))), 
+      interval = map(cors, ~pull(., diff_cor) %>% quantile(c(.025, .975))), 
+      lower = map_dbl(interval, ~.[[1]]),
+      upper = map_dbl(interval, ~.[[2]])
+    ) %>% 
+    ungroup() %>% 
+    select(
+      "College" = college, 
+      "Lower bound" = lower, 
+      "Upper bound" = upper
+    ) %>% 
+    arrange(`Upper bound`) %>% 
+    gt() %>% 
+    tab_header(
+      title = "95% Confidence Interval for the Correlation Between Rating and Difficulty",
+    ) %>% 
+    fmt_number(
+      columns = vars("Lower bound", "Upper bound")
+    )
+}
+
+
 
 plot_lm <- function(professors) {
   college_model <- lm(rating ~ difficulty, data =  professors)

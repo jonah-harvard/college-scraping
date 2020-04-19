@@ -103,6 +103,25 @@ boot_strap %>%
   quantile(c(.025, .975))
 ```
 
+```{r cor_by_college}
+library(purrr)
+professors %>% 
+  group_by(college) %>% 
+  nest() %>% 
+  mutate(
+    boot_strap = map(data, ~rep_sample_n(., size=nrow(.), replace = T, reps = 1000)),
+    grouped = map(boot_strap, ~group_by(., replicate)), 
+    cors = map(grouped, ~summarise(., diff_cor = cor(rating, difficulty))), 
+    interval = map(cors, ~pull(., diff_cor) %>% quantile(c(.025, .975))), 
+    lower = map_dbl(interval, ~.[[1]]),
+    upper = map_dbl(interval, ~.[[2]])
+  ) %>% 
+  select(
+    college, lower, upper
+  )
+
+```
+
 
 
 ```{r graphing_by_department}
