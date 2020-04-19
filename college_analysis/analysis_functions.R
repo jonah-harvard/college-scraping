@@ -2,11 +2,7 @@ library(tidyverse)
 library(jsonlite)
 library(gt)
 library(janitor)
-
-testing <- function() {
-  "HELLO WORLD"
-}
-
+library(infer)
 
 get_professor_data <- function() {
   professors_list <- fromJSON("./professor_ratings_by_college.json")
@@ -60,6 +56,7 @@ basic_plot <- function(professors) {
     theme_classic()
 }
 
+
 plot_facet_wrap <- function(professors) {
   professors %>% 
     ggplot(aes(difficulty, rating, color = department)) + 
@@ -77,6 +74,37 @@ plot_facet_wrap <- function(professors) {
     theme(legend.position = "none") + 
     facet_wrap(~college) 
 }
+
+calculate_cor <- function(professors) {
+  boot_strap <- rep_sample_n(professors, size = nrow(professors), replace = TRUE, reps = 1000)
+  cors <- boot_strap %>% 
+    group_by(replicate) %>% 
+    summarise(rating_difficulty_cor = cor(rating, difficulty)) %>% 
+    pull(rating_difficulty_cor)
+  upper <- cors %>% quantile(.975)
+  lower <- cors %>% quantile(.025)
+  paste0("(", lower, ", ", upper, ")")
+}
+
+plot_lm <- function(professors) {
+  college_model <- lm(rating ~ difficulty, data =  professors)
+  college_model %>% 
+    tidy(conf.int = T) %>% 
+    select(
+      "Variable" = term,
+      "Estimate" = estimate,
+      "Lower bound" = conf.low,
+      "Upper bound" = conf.high
+    ) %>% 
+    gt() %>% 
+    tab_header(
+      title = "Effect of Difficulty on Rating"
+    ) %>% 
+    fmt_number(
+      columns = vars("Estimate", "Lower bound", "Upper bound")
+    )
+}
+
 
 histogram_of_college <- function(professors, college_name) {
   college_data <- professors %>% filter(college == college_name)
@@ -115,3 +143,5 @@ plot_with_salary_facet_wrap <- function(professors, salaries) {
   professors %>% inner_join(salaries, by=c("college" = "school_name")) %>% 
     ggplot(aes(difficulty, rating, color = starting_median_salary)) + geom_point() + facet_wrap(~starting_median_salary)
 }
+
+

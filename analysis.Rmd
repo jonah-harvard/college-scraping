@@ -9,6 +9,9 @@ library(tidyverse)
 library(jsonlite)
 library(gt)
 library(janitor)
+library(broom)
+library(infer)
+
 professors_list <- fromJSON("./professor_ratings_by_college.json")
 salaries <- read_csv(
   "./college-salaries/salaries-by-college-type-reduced.csv", 
@@ -88,6 +91,20 @@ professors %>%
 When faceting by college, however, it becomes a lot clearer that there is, in fact, a negative correlation between difficulty and rating.
 
 
+```{r college_correlations}
+college_model <- lm(rating ~ difficulty, data =  professors)
+college_model %>% tidy(conf.int = T)
+
+boot_strap <- rep_sample_n(professors, size = nrow(professors), replace = TRUE, reps = 1000)
+boot_strap %>% 
+  group_by(replicate) %>% 
+  summarise(rating_difficulty_cor = cor(rating, difficulty)) %>% 
+  pull(rating_difficulty_cor) %>% 
+  quantile(c(.025, .975))
+```
+
+
+
 ```{r graphing_by_department}
 professors %>% 
   ggplot(aes(difficulty, rating, color = college)) + 
@@ -154,4 +171,27 @@ professors %>% inner_join(salaries, by=c("college" = "school_name")) %>%
 ```
 
 Even as we facet wrap, no clear relationship between starting median salary of graduates and ratings vs. difficulty jumps out.
+
+```{r rating_vs_salary}
+professors %>% inner_join(salaries, by=c("college" = "school_name")) %>% 
+  group_by(starting_median_salary) %>% 
+  summarize(avg_rating = mean(rating)) %>% 
+  ggplot(aes(starting_median_salary, avg_rating)) + geom_col()
+
+
+professors %>% inner_join(salaries, by=c("college" = "school_name")) %>% 
+  mutate(starting_median_salary = as.numeric(starting_median_salary)) %>% 
+  na.omit() %>% 
+  summarise(c = cor(rating, starting_median_salary))
+```
+
+```{r facet_by_college_color_by_salary}
+professors %>% inner_join(salaries, by=c("college" = "school_name")) %>% 
+  ggplot(aes(difficulty, rating, color = starting_median_salary)) + geom_point() + facet_wrap(~college)
+```
+
+
+
+
+
 
